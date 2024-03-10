@@ -5,7 +5,7 @@ export type Colors<T> = {
   gray3: T;
   gray4: T;
   gray5: T;
-  gray6: T;
+  black2: T;
   gray7: T;
   blue: T;
   deepBlue: T;
@@ -37,7 +37,7 @@ export const colors: Colors<string> = {
   lightgray: "#F5F5F9",
   gray2: "#666666",
   gray5: "#E0E0E0",
-  gray6: "#F2F2F2",
-  gray7: "#828282",
+  black2: "#1C1C1C",
+  gray7: "#969696",
   red: "#E43535",
 };

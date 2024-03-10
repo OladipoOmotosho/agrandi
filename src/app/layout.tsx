@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "../../components/Navbar/page";
+import Footer from "../../components/Footer/page";
 
 export const metadata: Metadata = {
   title: "Agrandi Technologies Inc.",
@@ -15,10 +16,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <nav>
+        <div>
           <NavBar />
-        </nav>
+        </div>
         <main>{children}</main>
+        <div>
+          <Footer />
+        </div>
       </body>
     </html>
   );

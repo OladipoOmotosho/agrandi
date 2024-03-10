@@ -64,7 +64,7 @@ const Service = () => {
           </p>
         </div>
         <div className="w-full ml-5">
-          <Image src={boyGirl} alt="" className="mt-[109px] md:min-w-[600px]" />
+          <Image src={boyGirl} alt="" className="mt-[109px] md:min-w-[650px]" />
         </div>
       </section>
     </div>

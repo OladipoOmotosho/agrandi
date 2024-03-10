@@ -1,61 +1,20 @@
 export const ServiceLink = [
   {
-    text: 'Eat Now',
-    link: '',
-  },
-  {
-    text: 'Meal Plans',
-    link: '',
-  },
-  {
-    text: 'Catering',
-    link: '/catering',
+    text: "Services",
+    link: "/services",
   },
 ];
 
-export const Help = [
+export const about = [
   {
-    text: 'About us',
-    link: 'about-us',
-  },
-  {
-    text: 'FAQs',
-    link: '',
-  },
-  {
-    text: 'Contact us',
-    link: '',
+    text: "About Us",
+    link: "/aboutUs",
   },
 ];
 
-export const Legal = [
+export const contact = [
   {
-    text: 'Cancellation Policy',
-    link: 'cancellation-policy',
-  },
-  {
-    text: 'Delivery Policy',
-    link: 'delivery-policy',
-  },
-  {
-    text: 'Privacy Policy ',
-    link: 'privacy-policy',
-  },
-  {
-    text: 'Terms of use',
-    link: 'terms-of-use',
+    text: "Get in touch",
+    link: "/contactUs",
   },
 ];
-
-export const Contact = [
-  {
-    text: 'Info@kounty.ng',
-    link: '',
-  },
-  {
-    text: '+234 903 351 5853',
-    link: '',
-  },
-];
-
-export const InstallLinks = ['', ''];

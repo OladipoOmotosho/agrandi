@@ -1,165 +1,81 @@
-import { colors } from '../../utils';
-import { Contact, Help, InstallLinks, Legal, ServiceLink } from './links';
-import styles from '../../styles/Footer.module.css';
-import {
-  AppStore,
-  EmailIcon,
-  FBIcon,
-  IGIcon,
-  PhoneLine,
-  PlayStore,
-  TwitterIcon,
-} from '../../assets';
-import Router from 'next/router';
-import Link from 'next/link';
+import { colors } from "../../utils";
+import { contact, about, ServiceLink } from "./links";
+import styles from "./Footer.module.css";
+import agrandi from "../../public/assets/icons/agrandi.svg";
+import Link from "next/link";
+import Image from "next/image";
+import facebook from "../../public/assets/icons/Facebook.svg";
+import insta from "../../public/assets/icons/insta.svg";
+import x from "../../public/assets/icons/x.svg";
+import youtube from "../../public/assets/icons/youtube.svg";
 
 const Footer = () => {
   return (
     <div
       className="md:flex md:justify-between items-start md:px-[82px] px-[24px] md:pt-[40px] pt-[60px] pb-[122px] md:pb-[56px]"
-      style={{ backgroundColor: colors.offWhite }}
+      style={{ backgroundColor: colors.white }}
     >
       <div>
-        <p
-          className={`text-base mb-[21px] ${styles.linkTopic}`}
-          style={{ color: colors.orange }}
-        >
-          KOUNTY
+        <p className={`text-base mb-[21px]`} style={{ color: colors.blue }}>
+          <Image src={agrandi} alt="logo" width={150} height={25} />
         </p>
-        <p
-          className={`text-sm pb-[24px] mb-[24px] border-b-[#EA5B31] border-b-[0.0313rem] ${styles.link}`}
-          style={{ color: colors.gray1 }}
-        >
-          Good food is just a few clicks away
-        </p>
-        <p
-          className={`text-sm mb-[32px] ${styles.link} `}
-          style={{ color: colors.orange }}
-        >
-          © 2022 All Rights Reserved
-        </p>
-        <div>
-          <p
-            className={`text-base mb-[12px] ${styles.linkTopic}`}
-            style={{ color: colors.orange }}
-          >
-            Follow us
-          </p>
-          <div className="flex md:gap-[20px] gap-[32px] md:mb-[0px] mb-[32px]  cursor-pointer">
-            <FBIcon />
-            <TwitterIcon />
-            <IGIcon />
+      </div>
+      <div className="flex flex-col gap-[30px] items-center">
+        <div className="flex flex-row gap-8">
+          <div>
+            {ServiceLink.map((link, index) => (
+              <Link key={index} href={link.link}>
+                <p
+                  key={index}
+                  className={`text-base font-normal cursor-pointer leading-5 tracking-tighter`}
+                  style={{ color: colors.black2 }}
+                >
+                  {link.text}
+                </p>
+              </Link>
+            ))}
+          </div>
+
+          <div>
+            {about.map((link, index) => (
+              <Link key={index} href={link.link}>
+                <p
+                  key={index}
+                  className={`text-base font-normal cursor-pointer `}
+                  style={{ color: colors.black2 }}
+                >
+                  {link.text}
+                </p>
+              </Link>
+            ))}
+          </div>
+          <div>
+            {contact.map((link, index) => (
+              <Link key={index} href={link.link}>
+                <p
+                  key={index}
+                  className={`text-base font-normal cursor-pointer `}
+                  style={{ color: colors.black2 }}
+                >
+                  {link.text}
+                </p>
+              </Link>
+            ))}
           </div>
         </div>
-      </div>
-      <div>
         <p
-          className={`text-white text-base mb-[34px] ${styles.linkTopic}`}
-          style={{ color: colors.orange }}
+          className={"font-normal text-[13px] leading-[18px]"}
+          style={{ color: colors.gray7 }}
         >
-          SERVICES
+          © Copyright 2024 Agrandi Technologies
         </p>
-        <div>
-          {ServiceLink.map((link, index) => (
-            <Link key={index} href={link.link}>
-              <p
-                key={index}
-                className={`text-white text-sm mb-[17px] cursor-pointer ${styles.link}`}
-                style={{ color: colors.gray1 }}
-              >
-                {link.text}
-              </p>
-            </Link>
-          ))}
-        </div>
       </div>
-      <div>
-        <p
-          className={`text-white text-base mb-[34px] ${styles.linkTopic}`}
-          style={{ color: colors.orange }}
-        >
-          Help
-        </p>
-        <div>
-          {Help.map((link, index) => (
-            <Link key={index} href={link.link}>
-              <p
-                key={index}
-                className={`text-white text-sm mb-[17px] cursor-pointer ${styles.link}`}
-                style={{ color: colors.gray1 }}
-              >
-                {link.text}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </div>
-      <div>
-        <p
-          className={`text-white text-base mb-[34px] ${styles.linkTopic}`}
-          style={{ color: colors.orange }}
-        >
-          Legal
-        </p>
-        <div>
-          {Legal.map((link, index) => (
-            <Link key={index} href={link.link}>
-              <p
-                key={index}
-                className={`text-white text-sm mb-[17px] cursor-pointer ${styles.link}`}
-                style={{ color: colors.gray1 }}
-              >
-                {link.text}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </div>
-      <div>
-        <p
-          className={`text-white text-base mb-[34px] ${styles.linkTopic}`}
-          style={{ color: colors.orange }}
-        >
-          Contact Us
-        </p>
-        <div>
-          {Contact.map((link, index) => (
-            <div
-              className="flex gap-2 items-center  mb-[17px] cursor-pointer"
-              key={index}
-            >
-              {index === 0 ? (
-                <EmailIcon />
-              ) : (
-                <PhoneLine className="stroke-[#EA5B31]" />
-              )}
-              <p
-                className={`text-white text-sm ${styles.link}`}
-                style={{ color: colors.gray1 }}
-              >
-                {link.text}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div>
-        <p
-          className={`text-white text-base mb-[34px] ${styles.linkTopic}`}
-          style={{ color: colors.orange }}
-        >
-          Install App
-        </p>
-        <div className="flex md:flex-col flex-row md:gap-[0.75rem] gap-[16px]">
-          <div className="cursor-pointer">
-            <AppStore />
-          </div>
-          <div className="cursor-pointer">
-            <PlayStore />
-          </div>
-          {/* {InstallLinks.map((link, index) => (
-          ))} */}
-        </div>
+
+      <div className="flex flex-row items-center gap-3">
+        <Image src={facebook} alt="image" />
+        <Image src={insta} alt="image" />
+        <Image src={x} alt="image" />
+        <Image src={youtube} alt="image" />
       </div>
     </div>
   );
