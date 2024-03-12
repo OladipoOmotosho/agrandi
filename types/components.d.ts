@@ -40,7 +40,7 @@ type CustomTextInput = {
 };
 
 type CustomButton = {
-  text: string;
+  text: string | number;
   disabled: boolean;
   width?: number;
   height?: number;
@@ -49,6 +49,7 @@ type CustomButton = {
   paddingLeft?: number;
   paddingRight?: number;
   fontWeight?: number;
+  fontFamily?: string;
   textSize?: number;
   color?: string;
   loading?: boolean;
@@ -61,6 +62,7 @@ type CustomButton = {
   borderEndEndRadius?: number;
   borderEndStartRadius?: number;
   fontSize?: number;
+  className?: any;
 };
 
 type LayoutProps = {
@@ -143,4 +145,12 @@ type TopUpDetails = {
   icon?: any;
   amount?: number | string;
   item?: JSX.Element;
+};
+
+type infoBlock = {
+  heading: number | string;
+  information: number | string;
+  img: string;
+  className: any;
+  type?: string;
 };

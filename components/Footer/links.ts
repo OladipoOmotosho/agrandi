@@ -8,7 +8,7 @@ export const ServiceLink = [
 export const about = [
   {
     text: "About Us",
-    link: "/aboutUs",
+    link: "/about",
   },
 ];
 

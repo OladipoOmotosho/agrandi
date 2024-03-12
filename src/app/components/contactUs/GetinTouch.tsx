@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import coffeeMan from "../../../../public/assets/images/coffeeMan.png";
+import arrow from "../../../../public/assets/icons/companys/arrow.svg";
 import { colors } from "../../../../utils";
 
 const GetinTouch = () => {
   return (
-    <div className="mx-[100px]">
-      <section className="flex flex-row py-[60px]">
+    <div className="mx-[140px]">
+      <section className="flex flex-row gap-20 2xl:justify-between py-[60px]">
         <div className="w-full">
           <Image src={coffeeMan} alt="coffeeMan" />
         </div>
@@ -18,8 +19,8 @@ const GetinTouch = () => {
             Get in touch
           </h3>
           <p
-            className="font-normal text-base text-left leading-[27.8px] tracking-wide w-4/5"
-            style={{ color: colors.grayBlack }}
+            className="font-normal text-base text-left leading-[27.8px] tracking-wide md:w-[57%]"
+            style={{ color: colors.black2 }}
           >
             Ready to elevate your digital presence or in need of expert IT
             guidance? We&apos;re here to help. Reach out to us, and let&apos;s
@@ -29,6 +30,12 @@ const GetinTouch = () => {
             is eager to collaborate with you. Contact us today to take the first
             step towards building a digital future that your audience will love.
           </p>
+          <div
+            className="p-4 rounded-full w-20 h-20"
+            style={{ background: colors.blue }}
+          >
+            <Image src={arrow} alt="arrow" />
+          </div>
         </div>
       </section>
     </div>

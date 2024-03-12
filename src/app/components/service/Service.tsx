@@ -12,7 +12,7 @@ const Service = () => {
       >
         Our Services
       </h1>
-      <section className="flex flex-row justify-between pr-[148px] pl-[116px] mt-[90px]">
+      <section className="flex flex-col-reverse xl:flex xl:flex-row xl:justify-between pr-[148px] pl-[116px] mt-[90px]">
         <div className="w-full">
           <h3
             className="font-medium text-[40px] text-left w-4/5"
@@ -35,14 +35,19 @@ const Service = () => {
           </p>
         </div>
         <div className="w-full">
-          <Image src={coding} alt="code" className="md:min-w-[600px]" />
+          <Image
+            src={coding}
+            alt="code"
+            className="md:min-w-[600px]"
+            style={{ width: "auto", height: "auto" }}
+          />
         </div>
       </section>
       <section
-        className="mx-[100px] flex flex-row justify-between items-end pt-20 pl-20 pb-0 rounded-[40px] mt-[140px]"
+        className="mx-[100px] flex flex-col-reverse xl:flex xl:flex-row xl:justify-between items-end xl:pt-20 pl-20 pb-0 rounded-[40px] mt-[140px]"
         style={{ background: colors.deepBlue }}
       >
-        <div className="w-full pb-[78px] flex flex-col gap-3">
+        <div className="w-full pb-[78px] flex flex-col gap-3 lg:min-w-[500px]">
           <h3
             className="font-medium text-[40px]"
             style={{ color: colors.white }}
@@ -51,7 +56,7 @@ const Service = () => {
           </h3>
           <p
             style={{ color: colors.white }}
-            className="font-normal text-base leading-[27.8px] tracking-wide w-4/5"
+            className="font-normal text-base leading-[27.8px] tracking-wide md:w-4/5"
           >
             Navigate the ever-evolving landscape of technology with Agrandi
             Technologies as your trusted IT consulting partner. We offer
@@ -64,7 +69,12 @@ const Service = () => {
           </p>
         </div>
         <div className="w-full ml-5">
-          <Image src={boyGirl} alt="" className="mt-[109px] md:min-w-[650px]" />
+          <Image
+            src={boyGirl}
+            alt=""
+            className="mt-[109px] lg:min-w-[650px]"
+            style={{ width: "auto", height: "auto" }}
+          />
         </div>
       </section>
     </div>

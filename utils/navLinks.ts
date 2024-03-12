@@ -5,6 +5,6 @@ export const firstlinks = [
   },
   {
     text: "About Us",
-    link: "/aboutUs",
+    link: "/about",
   },
 ];

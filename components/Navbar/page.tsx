@@ -1,6 +1,6 @@
 "use client";
 
-import { firstlinks } from "../../utils";
+import { FONTFAMILY, firstlinks } from "../../utils";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -24,17 +24,23 @@ const NavBar = () => {
       >
         <div className="flex flex-row justify-between items-center">
           <div className="flex flex-row items-center gap-10">
-            <Image src={agrandi} alt="logo" width={150} height={25} />
+            <Image
+              src={agrandi}
+              alt="logo"
+              width={150}
+              height={25}
+              style={{ width: "auto", height: "auto" }}
+            />
             {firstlinks.map((nav, index) => (
               <Link href={nav.link} key={index} className="">
                 <p
-                  // style={{ fontFamily: FONTFAMILY.inter }}
+                  style={{ fontFamily: FONTFAMILY.inter }}
                   className={`font-normal ${
                     pathname === nav.link
-                      ? "text-[#2b1a3e]"
+                      ? "text-[#635BFF]"
                       : pathname === "/" ||
                         pathname === "/services" ||
-                        pathname === "/aboutUs" ||
+                        pathname === "/about" ||
                         (pathname === "/contactUs" && "text-[#1C1C24]")
                   }`}
                 >

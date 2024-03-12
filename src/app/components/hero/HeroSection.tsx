@@ -58,13 +58,20 @@ const HeroSection = () => {
           />
         </div>
         <div className="flex flex-row justify-center mt-[-3] px-[108px]">
-          <Image src={people} alt="people" width={767} height={417} />
+          <Image
+            src={people}
+            alt="people"
+            width={767}
+            height={417}
+            style={{ width: 767, height: "auto" }}
+          />
           <Image
             src={person}
             alt="person"
             width={423}
             height={417}
             className="ml-[-80px]"
+            style={{ width: 423, height: "auto" }}
           />
         </div>
       </section>
@@ -77,7 +84,14 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-row justify-center gap-16">
           {logos.map((icon, key) => (
-            <Image key={key} src={icon.logo} alt="logo" />
+            <Image
+              key={key}
+              src={icon.logo}
+              alt="logo"
+              width={200}
+              height={200}
+              style={{ width: "auto", height: "auto" }}
+            />
           ))}
         </div>
       </section>

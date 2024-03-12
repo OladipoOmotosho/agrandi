@@ -12,12 +12,18 @@ import youtube from "../../public/assets/icons/youtube.svg";
 const Footer = () => {
   return (
     <div
-      className="md:flex md:justify-between items-start md:px-[82px] px-[24px] md:pt-[40px] pt-[60px] pb-[122px] md:pb-[56px]"
+      className="md:flex md:justify-between items-start md:px-[140px] px-[24px] md:pt-[40px] pt-[60px] pb-[122px] md:pb-[56px]"
       style={{ backgroundColor: colors.white }}
     >
       <div>
         <p className={`text-base mb-[21px]`} style={{ color: colors.blue }}>
-          <Image src={agrandi} alt="logo" width={150} height={25} />
+          <Image
+            src={agrandi}
+            alt="logo"
+            width={150}
+            height={25}
+            style={{ width: "auto", height: "auto" }}
+          />
         </p>
       </div>
       <div className="flex flex-col gap-[30px] items-center">

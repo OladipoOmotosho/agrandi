@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --font-family: "inter", serif;
+  --font-family2: "DM Sans", "Montserrat", serif;
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("../../public/assets/fonts/inter/Inter-VariableFont_slnt\,wght.ttf");
+  /* font-weight: 700; */
+  font-style: normal;
+}
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../public/assets/fonts/dmSans/DMSans-VariableFont_opsz\,wght.ttf");
+  /* font-weight: 700; */
+  font-style: normal;
+}

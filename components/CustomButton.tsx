@@ -1,4 +1,3 @@
-import { height } from "@mui/system";
 import { colors, FONTFAMILY } from "../utils";
 import useScreenSize from "../utils/useScreenSize";
 
@@ -18,10 +17,8 @@ const CustomButton = ({
   background = colors.blue,
   border = "none",
   borderRadius,
-  // borderTopLeftRadius,
-  // borderTopRightRadius,
-  // borderEndEndRadius,
-  // borderEndStartRadius,
+  fontFamily,
+  className,
   fontSize,
 }: CustomButton) => {
   const { windowSize, isMobile, isTablet, isDesktop } = useScreenSize();
@@ -42,14 +39,11 @@ const CustomButton = ({
         paddingRight: paddingRight,
         color: color,
         border: border,
-        // borderTopLeftRadius: borderTopLeftRadius,
-        // borderTopRightRadius: borderTopRightRadius,
-        // borderEndEndRadius: borderEndEndRadius,
-        // borderEndStartRadius: borderEndStartRadius,
+        fontFamily: fontFamily,
         fontSize: fontSize,
         fontWeight: fontWeight,
       }}
-      className={` text-white flex flex-row justify-center items-center`}
+      className={`${className} text-white flex flex-row justify-center items-center`}
       onClick={loading || disabled ? () => null : onClick}
     >
       {text}
