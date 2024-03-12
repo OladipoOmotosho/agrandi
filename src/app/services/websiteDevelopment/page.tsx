@@ -3,10 +3,29 @@ import Frame from "../components/Frame";
 import Image from "next/image";
 import dev from "../../../../public/assets/images/dev.png";
 import wireframes from "../../../../public/assets/images/wireframes.png";
+import { FONTFAMILY, colors } from "../../../../utils";
+import WhyBox from "../components/WhyBox";
 
 const page = () => {
+  const leftSideDetails = [
+    {
+      text: "Unparalleled Expertise",
+      reasons:
+        "At the heart of our success is our team of seasoned developers and designers. With a wealth of experience and a commitment to staying ahead of industry trends, we bring a diverse skill set to every project. From intuitive user interfaces to robust backend systems, we have the expertise to turn your vision into reality.",
+    },
+    {
+      text: "Unparalleled Expertise",
+      reasons:
+        "At the heart of our success is our team of seasoned developers and designers. With a wealth of experience and a commitment to staying ahead of industry trends, we bring a diverse skill set to every project. From intuitive user interfaces to robust backend systems, we have the expertise to turn your vision into reality.",
+    },
+    {
+      text: "Unparalleled Expertise",
+      reasons:
+        "At the heart of our success is our team of seasoned developers and designers. With a wealth of experience and a commitment to staying ahead of industry trends, we bring a diverse skill set to every project. From intuitive user interfaces to robust backend systems, we have the expertise to turn your vision into reality.",
+    },
+  ];
   return (
-    <div>
+    <div className="">
       <Frame
         heading={"Website and Application Development"}
         information={
@@ -23,12 +42,32 @@ const page = () => {
         subTopic={
           "Your Gateway to Innovative Website and Application Development"
         }
-        subTitle={
-          "Why Choose Agrandi Technologies for Website and Application Development?"
-        }
-        text="Unparalleled Expertise"
-        reasons="At the heart of our success is our team of seasoned developers and designers. With a wealth of experience and a commitment to staying ahead of industry trends, we bring a diverse skill set to every project. From intuitive user interfaces to robust backend systems, we have the expertise to turn your vision into reality."
       />
+      <section
+        className="mt-[88px] flex flex-col items-center px-[198px] pt-10 pb-[60px]"
+        style={{ background: colors.lightgray }}
+      >
+        <h3
+          className="font-medium text-2xl text-center leading-8 tracking-[0.51px] w-[45%] mb-[60px]"
+          style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
+        >
+          {
+            "Why Choose Agrandi Technologies for Website and Application Development?"
+          }
+        </h3>
+        <div className="w-full flex flex-row justify-center">
+          <div>
+            {leftSideDetails.map((left, index) => (
+              <WhyBox key={index} text={left.text} reasons={left.reasons} />
+            ))}
+          </div>
+          <div>
+            {leftSideDetails.map((left, index) => (
+              <WhyBox key={index} text={left.text} reasons={left.reasons} />
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

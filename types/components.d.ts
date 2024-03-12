@@ -163,13 +163,16 @@ type frame = {
   className?: any;
   type?: string;
   subHead: string;
-  subTitle: string;
   detail: string;
   subTopic: string;
-  text: string;
-  reasons: string;
 };
 type sideBars = {
   img1: string;
   img2: string;
+  type: string;
+  className?: any;
+};
+type whyBox = {
+  text: string;
+  reasons: string;
 };
