@@ -14,14 +14,29 @@ const page = () => {
         "At the heart of our success is our team of seasoned developers and designers. With a wealth of experience and a commitment to staying ahead of industry trends, we bring a diverse skill set to every project. From intuitive user interfaces to robust backend systems, we have the expertise to turn your vision into reality.",
     },
     {
-      text: "Unparalleled Expertise",
+      text: "Customized Solutions",
       reasons:
-        "At the heart of our success is our team of seasoned developers and designers. With a wealth of experience and a commitment to staying ahead of industry trends, we bring a diverse skill set to every project. From intuitive user interfaces to robust backend systems, we have the expertise to turn your vision into reality.",
+        "We understand that one size does not fit all. That's why our approach is centered on understanding your unique requirements and tailoring our solutions accordingly. Whether you need a dynamic website, a feature-rich mobile application, or a comprehensive e-commerce platform, we have the skills to deliver bespoke solutions that align with your business objectives.",
     },
     {
-      text: "Unparalleled Expertise",
+      text: "Cutting-Edge Technologies",
       reasons:
-        "At the heart of our success is our team of seasoned developers and designers. With a wealth of experience and a commitment to staying ahead of industry trends, we bring a diverse skill set to every project. From intuitive user interfaces to robust backend systems, we have the expertise to turn your vision into reality.",
+        "In the ever-evolving landscape of technology, staying ahead is key. Agrandi Technologies is committed to harnessing the power of the latest tools and technologies. From responsive web design to scalable cloud-based applications, we leverage innovative solutions to ensure your digital presence remains at the forefront of industry standards.",
+    },
+    {
+      text: "User-Centric Design",
+      reasons:
+        "User experience is at the core of everything we do. Our design philosophy revolves around creating seamless, intuitive, and visually appealing interfaces that captivate your audience. We understand the importance of a positive user experience in driving engagement and conversion, and we meticulously design every element with this in mind.",
+    },
+    {
+      text: "Agile Development Methodology",
+      reasons:
+        "In a dynamic digital landscape, agility is key. Agrandi Technologies follows agile development practices to ensure flexibility and adaptability throughout the project lifecycle. This approach allows for continuous collaboration, quick iterations, and the ability to respond promptly to changing requirements.",
+    },
+    {
+      text: "Comprehensive Support",
+      reasons:
+        "Our commitment to your success doesn't end with the delivery of the final product. Agrandi Technologies provides ongoing support and maintenance to ensure that your website or application continues to perform at its best. Our support team is readily available to address any issues, implement updates, and provide guidance as your digital presence evolves.",
     },
   ];
   return (
@@ -44,7 +59,7 @@ const page = () => {
         }
       />
       <section
-        className="mt-[88px] flex flex-col items-center px-[198px] pt-10 pb-[60px]"
+        className="mt-[88px] flex flex-col items-center pt-10 pb-[60px]"
         style={{ background: colors.lightgray }}
       >
         <h3
@@ -55,16 +70,40 @@ const page = () => {
             "Why Choose Agrandi Technologies for Website and Application Development?"
           }
         </h3>
-        <div className="w-full flex flex-row justify-center">
-          <div>
-            {leftSideDetails.map((left, index) => (
-              <WhyBox key={index} text={left.text} reasons={left.reasons} />
+        <div className="w-full flex flex-row justify-between gap-10 pl-[175px] pr-[198px]">
+          <div className="flex flex-col">
+            {leftSideDetails.slice(0, 2).map((left, index) => (
+              <WhyBox
+                key={index}
+                text={left.text}
+                reasons={left.reasons}
+                type={"line"}
+              />
             ))}
+            {leftSideDetails.length >= 3 && (
+              <WhyBox
+                text={leftSideDetails[2].text}
+                reasons={leftSideDetails[2].reasons}
+                type={"noLine"}
+              />
+            )}
           </div>
-          <div>
-            {leftSideDetails.map((left, index) => (
-              <WhyBox key={index} text={left.text} reasons={left.reasons} />
+          <div className="flex flex-col">
+            {leftSideDetails.slice(3, 5).map((left, index) => (
+              <WhyBox
+                key={index + 3}
+                text={left.text}
+                reasons={left.reasons}
+                type={"line"}
+              />
             ))}
+            {leftSideDetails.length === 6 && (
+              <WhyBox
+                text={leftSideDetails[5].text}
+                reasons={leftSideDetails[5].reasons}
+                type={"noLine"}
+              />
+            )}
           </div>
         </div>
       </section>

@@ -175,4 +175,5 @@ type sideBars = {
 type whyBox = {
   text: string;
   reasons: string;
+  type: string;
 };
