@@ -23,7 +23,11 @@ const page = () => {
         subTopic={
           "Your Gateway to Innovative Website and Application Development"
         }
-        subTitle={""}
+        subTitle={
+          "Why Choose Agrandi Technologies for Website and Application Development?"
+        }
+        text="Unparalleled Expertise"
+        reasons="At the heart of our success is our team of seasoned developers and designers. With a wealth of experience and a commitment to staying ahead of industry trends, we bring a diverse skill set to every project. From intuitive user interfaces to robust backend systems, we have the expertise to turn your vision into reality."
       />
     </div>
   );

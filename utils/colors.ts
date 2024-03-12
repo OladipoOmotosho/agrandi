@@ -23,7 +23,7 @@ export type Colors<T> = {
 export const colors: Colors<string> = {
   white: "#ffffff",
   black: "#000000",
-  gray3: "rgba(130, 130, 130, 1)",
+  gray3: "#424249",
   gray4: "rgba(189, 189, 189, 1)",
   grayBlack: "rgba(0, 0, 0, 0.5)",
   blue: "#635BFF",

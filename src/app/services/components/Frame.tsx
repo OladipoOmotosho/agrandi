@@ -16,6 +16,8 @@ const Frame = ({
   img,
   detail,
   subTopic,
+  text,
+  reasons,
 }: frame) => {
   return (
     <div className="mx-8 my-10">
@@ -84,9 +86,52 @@ const Frame = ({
           />
         </div>
       </section>
-      <section>
+      <section className="flex flex-col items-center mx-[100px]">
         <h3>{subTitle}</h3>
-        <SideBars img1={circle} img2={line} />
+        <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-start items-start">
+            <SideBars img1={circle} img2={line} />
+            <div className=" w-1/2">
+              <h4
+                className="text-xl font-medium leading-8 tracking-[0.51px]"
+                style={{ fontFamily: FONTFAMILY.inter, color: colors.gray3 }}
+              >
+                {text}
+              </h4>
+              <p
+                className="font-light text-base text-left leading-[27.8px] tracking-[0.51px]"
+                style={{
+                  color: colors.gray2,
+                  fontFamily: FONTFAMILY.inter,
+                  fontWeight: 300,
+                }}
+              >
+                {reasons}
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-row justify-start items-start">
+            <SideBars img1={circle} img2={line} />
+            <div className=" w-[50%]">
+              <h4
+                className="text-xl font-medium leading-8 tracking-[0.51px]"
+                style={{ fontFamily: FONTFAMILY.inter, color: colors.gray3 }}
+              >
+                {text}
+              </h4>
+              <p
+                className="font-light text-base text-left leading-[27.8px] tracking-[0.51px]"
+                style={{
+                  color: colors.gray2,
+                  fontFamily: FONTFAMILY.inter,
+                  fontWeight: 300,
+                }}
+              >
+                {reasons}
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );

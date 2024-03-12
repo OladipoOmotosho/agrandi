@@ -166,6 +166,8 @@ type frame = {
   subTitle: string;
   detail: string;
   subTopic: string;
+  text: string;
+  reasons: string;
 };
 type sideBars = {
   img1: string;
