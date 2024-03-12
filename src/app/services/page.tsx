@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import InfoBlock from "./components/InfoBlock";
+import InfoBlock from "../../../components/InfoBlock";
 import htmlDude from "../../../public/assets/images/htmlDude.png";
 import lady from "../../../public/assets/images/lady.png";
 import women from "../../../public/assets/images/women.png";

@@ -1,13 +1,49 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import aboutBg from "../../../public/assets/images/aboutBg.png";
 import { FONTFAMILY, colors } from "../../../utils";
+import InfoBlock from "../../../components/InfoBlock";
+import vrGirl from "../../../public/assets/images/vrGirl.png";
+import handshake from "../../../public/assets/images/handshake.png";
+import map from "../../../public/assets/images/map.png";
 
 const page = () => {
+  const details = [
+    {
+      heading: "In the heart of Innovation",
+      information: (
+        <p>
+          Website and Application Development
+          <br />
+          At Agrandi Technologies, we are passionate about crafting exceptional
+          digital experiences. Our team of skilled developers specializes in
+          creating dynamic and user-friendly websites and mobile applications.
+          From concept to deployment, we focus on delivering innovative
+          solutions that not only meet but exceed your expectations. Whether you
+          need a sleek and responsive website or a cutting-edge mobile app, we
+          bring your vision to life with precision and creativity
+        </p>
+      ),
+      img: vrGirl.src,
+    },
+    {
+      heading: "Beyond Technology- It's a Partnership",
+      information:
+        "At Agrandi, we recognize that our success is intertwined with the success of our clients. We don't just offer products; we forge partnerships. Our team is dedicated to understanding the unique challenges of each business we work with, ensuring our solutions align seamlessly with their goals and aspirations.",
+      img: handshake.src,
+    },
+    {
+      heading: "Toronto Roots, Global Impact",
+      information:
+        "Proudly headquartered in Toronto, we are driven by a global perspective. Our solutions transcend borders, impacting businesses far and wide. From local startups to established enterprises, Agrandi Technologies is the catalyst for digital transformation, propelling businesses into a future where they not only survive but thrive.",
+      img: map.src,
+    },
+  ];
   return (
     <div>
       <div className="mx-8">
-        <Image src={aboutBg} alt="" />
+        <Image src={aboutBg} alt="backgroundImage" />
       </div>
       <div className="mb-[92px]">
         <section className="flex flex-row justify-between 2xl:justify-center 2xl:gap-44">
@@ -62,6 +98,20 @@ const page = () => {
             </p>
           </div>
         </section>
+      </div>
+      <div className="ml-[140px] mr-[117px]">
+        {details.map((detail, index) => (
+          <InfoBlock
+            key={index}
+            heading={detail.heading}
+            information={detail.information}
+            img={detail.img}
+            className={`flex ${
+              index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+            } justify-between items-center gap-24`}
+            type="about"
+          />
+        ))}
       </div>
     </div>
   );

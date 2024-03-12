@@ -149,7 +149,7 @@ type TopUpDetails = {
 
 type infoBlock = {
   heading: number | string;
-  information: number | string;
+  information: React.ReactNode;
   img: string;
   className: any;
   type?: string;

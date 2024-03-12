@@ -1,6 +1,6 @@
 import React from "react";
-import { FONTFAMILY, colors } from "../../../../utils";
-import CustomButton from "../../../../components/CustomButton";
+import { FONTFAMILY, colors } from "../utils";
+import CustomButton from "./CustomButton";
 import Image from "next/image";
 
 const InfoBlock = ({
