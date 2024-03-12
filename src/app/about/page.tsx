@@ -13,9 +13,11 @@ const page = () => {
     {
       heading: "In the heart of Innovation",
       information: (
-        <p>
-          Website and Application Development
-          <br />
+        <>
+          <>
+            {" "}
+            Website and Application Development <br />{" "}
+          </>
           At Agrandi Technologies, we are passionate about crafting exceptional
           digital experiences. Our team of skilled developers specializes in
           creating dynamic and user-friendly websites and mobile applications.
@@ -23,7 +25,7 @@ const page = () => {
           solutions that not only meet but exceed your expectations. Whether you
           need a sleek and responsive website or a cutting-edge mobile app, we
           bring your vision to life with precision and creativity
-        </p>
+        </>
       ),
       img: vrGirl.src,
     },
@@ -41,9 +43,9 @@ const page = () => {
     },
   ];
   return (
-    <div>
+    <div className="mb-[146px]">
       <div className="mx-8">
-        <Image src={aboutBg} alt="backgroundImage" />
+        <Image src={aboutBg} alt="backgroundImage" quality={90} />
       </div>
       <div className="mb-[92px]">
         <section className="flex flex-row justify-between 2xl:justify-center 2xl:gap-44">

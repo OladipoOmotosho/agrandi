@@ -33,7 +33,7 @@ const Footer = () => {
               <Link key={index} href={link.link}>
                 <p
                   key={index}
-                  className={`text-base font-normal cursor-pointer leading-5 tracking-tighter`}
+                  className={`text-base font-[500] cursor-pointer`}
                   style={{ color: colors.black2 }}
                 >
                   {link.text}
@@ -47,7 +47,7 @@ const Footer = () => {
               <Link key={index} href={link.link}>
                 <p
                   key={index}
-                  className={`text-base font-normal cursor-pointer `}
+                  className={`text-base font-[500] cursor-pointer `}
                   style={{ color: colors.black2 }}
                 >
                   {link.text}
@@ -60,7 +60,7 @@ const Footer = () => {
               <Link key={index} href={link.link}>
                 <p
                   key={index}
-                  className={`text-base font-normal cursor-pointer `}
+                  className={`text-base font-[500] cursor-pointer `}
                   style={{ color: colors.black2 }}
                 >
                   {link.text}
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
         </div>
         <p
-          className={"font-normal text-[13px] leading-[18px]"}
+          className={"font-[500] text-[13px] leading-[18px]"}
           style={{ color: colors.gray7 }}
         >
           © Copyright 2024 Agrandi Technologies

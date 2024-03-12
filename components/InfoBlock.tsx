@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { FONTFAMILY, colors } from "../utils";
 import CustomButton from "./CustomButton";
@@ -42,6 +43,7 @@ const InfoBlock = ({
               borderRadius={10}
               fontFamily={FONTFAMILY.dmSans}
               className={"tracking-wider"}
+              href="/services/websiteDevelopment"
             />
           ) : (
             type === "about" && ""
@@ -55,6 +57,7 @@ const InfoBlock = ({
           width={604}
           height={419}
           // className="lg:min-w-[650px]"
+          quality={90}
           style={{ width: "auto", height: "auto" }}
         />
       </div>

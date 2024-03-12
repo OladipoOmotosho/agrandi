@@ -63,6 +63,7 @@ type CustomButton = {
   borderEndStartRadius?: number;
   fontSize?: number;
   className?: any;
+  href?: string;
 };
 
 type LayoutProps = {
@@ -153,4 +154,20 @@ type infoBlock = {
   img: string;
   className: any;
   type?: string;
+};
+type frame = {
+  heading: number | string;
+  information: React.ReactNode;
+  pic: string;
+  img: string;
+  className?: any;
+  type?: string;
+  subHead: string;
+  subTitle: string;
+  detail: string;
+  subTopic: string;
+};
+type sideBars = {
+  img1: string;
+  img2: string;
 };

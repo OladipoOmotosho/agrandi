@@ -15,7 +15,7 @@ const Service = () => {
       <section className="flex flex-col-reverse xl:flex xl:flex-row xl:justify-between pr-[148px] pl-[116px] mt-[90px]">
         <div className="w-full">
           <h3
-            className="font-medium text-[40px] text-left w-4/5"
+            className="font-medium text-[40px] text-left w-[57%]"
             style={{ color: colors.black }}
           >
             Website, Web & Mobile Application Development
