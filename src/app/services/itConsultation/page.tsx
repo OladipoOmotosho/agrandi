@@ -1,85 +1,85 @@
 import React from "react";
 import Frame from "../components/Frame";
 import Image from "next/image";
-import dev from "../../../../public/assets/images/dev.png";
-import wireframes from "../../../../public/assets/images/wireframes.png";
+import businessMeet from "../../../../public/assets/images/businessMeet.png";
+import businessBg from "../../../../public/assets/images/businessBg.png";
 import { FONTFAMILY, colors } from "../../../../utils";
 import WhyBox from "../components/WhyBox";
-import sketch from "../../../../public/assets/images/sketch.png";
+import businessFootImg from "../../../../public/assets/images/businessFootImg.png";
 import DevelopmentProcess from "../components/DevelopmentProcess";
 
 const page = () => {
   const leftSideDetails = [
     {
-      text: "Unparalleled Expertise",
+      text: "Holistic Approach",
       reasons:
-        "At the heart of our success is our team of seasoned developers and designers. With a wealth of experience and a commitment to staying ahead of industry trends, we bring a diverse skill set to every project. From intuitive user interfaces to robust backend systems, we have the expertise to turn your vision into reality.",
+        "We understand that successful IT consulting goes beyond solving immediate challenges. It involves a holistic understanding of your business, its objectives, and the industry landscape. Our seasoned consultants work closely with you to develop a comprehensive IT strategy that aligns with your business goals and sets the stage for long-term success.",
     },
     {
-      text: "Customized Solutions",
+      text: "Strategic Planning",
       reasons:
-        "We understand that one size does not fit all. That's why our approach is centered on understanding your unique requirements and tailoring our solutions accordingly. Whether you need a dynamic website, a feature-rich mobile application, or a comprehensive e-commerce platform, we have the skills to deliver bespoke solutions that align with your business objectives.",
+        "Our consulting services begin with a thorough analysis of your current IT infrastructure, processes, and challenges. Through strategic planning, we identify opportunities for improvement, optimization, and innovation. Whether you're looking to streamline operations, enhance cybersecurity, or leverage emerging technologies, our consultants craft a roadmap tailored to your unique needs.",
     },
     {
-      text: "Cutting-Edge Technologies",
+      text: "Technology Alignment",
       reasons:
-        "In the ever-evolving landscape of technology, staying ahead is key. Agrandi Technologies is committed to harnessing the power of the latest tools and technologies. From responsive web design to scalable cloud-based applications, we leverage innovative solutions to ensure your digital presence remains at the forefront of industry standards.",
+        "The rapidly evolving nature of technology requires businesses to stay agile and adaptive. Agrandi Technologies ensures that your IT infrastructure is aligned with the latest advancements, promoting efficiency and scalability. We assess your current technology stack, recommend upgrades or integrations, and guide you in leveraging the right tools to stay competitive in your industry.",
     },
     {
-      text: "User-Centric Design",
+      text: "Cybersecurity Expertise",
       reasons:
-        "User experience is at the core of everything we do. Our design philosophy revolves around creating seamless, intuitive, and visually appealing interfaces that captivate your audience. We understand the importance of a positive user experience in driving engagement and conversion, and we meticulously design every element with this in mind.",
+        "In an era where data breaches and cyber threats are on the rise, safeguarding your digital assets is paramount. Our IT consultants bring extensive cybersecurity expertise to the table. From risk assessments to implementing robust security measures, we prioritize the protection of your sensitive information, ensuring compliance with industry regulations and bolstering your overall security posture.",
     },
     {
-      text: "Agile Development Methodology",
+      text: "Scalability and Flexibility",
       reasons:
-        "In a dynamic digital landscape, agility is key. Agrandi Technologies follows agile development practices to ensure flexibility and adaptability throughout the project lifecycle. This approach allows for continuous collaboration, quick iterations, and the ability to respond promptly to changing requirements.",
+        "Agrandi Technologies understands that business needs are dynamic. Our IT consulting services are designed to be scalable and flexible, allowing you to adapt to changing requirements and market conditions. Whether you're expanding operations, entering new markets, or integrating new technologies, our consultants provide guidance to ensure a seamless and efficient transition.",
     },
     {
-      text: "Comprehensive Support",
+      text: "Cost Optimization",
       reasons:
-        "Our commitment to your success doesn't end with the delivery of the final product. Agrandi Technologies provides ongoing support and maintenance to ensure that your website or application continues to perform at its best. Our support team is readily available to address any issues, implement updates, and provide guidance as your digital presence evolves.",
+        "Effective IT consulting is not just about implementing the latest technologies; it's also about optimizing costs. Agrandi Technologies conducts thorough cost assessments to identify opportunities for optimization without compromising on performance. Our goal is to help you achieve maximum efficiency and ROI from your IT investments.",
     },
   ];
   const devProcess = [
     {
-      text: "Discovery and Planning",
+      text: "Needs Assessment",
       reasons:
-        "We kick off every project with a thorough discovery phase, where we delve into your goals, target audience, and unique challenges. This lays the foundation for a comprehensive development plan that aligns with your vision and objectives.",
+        "We begin by understanding your business objectives, challenges, and existing IT landscape. Through in-depth discussions and analysis, our consultants identify areas where technology can drive value and improvement.",
     },
     {
-      text: "Design and Prototyping",
+      text: "Strategic Planning",
       reasons:
-        "Our design process involves creating visually stunning and user-friendly prototypes. This stage allows you to visualize the end product and provides an opportunity for feedback and refinement before moving into full-scale development.",
+        "Based on the needs assessment, we develop a tailored IT strategy that aligns with your business goals. This includes recommendations for technology upgrades, process improvements, and cybersecurity measures.",
     },
     {
-      text: "Development and Testing",
+      text: "Implementation and Integration",
       reasons:
-        "With a solid plan and design in place, our development team brings your project to life. We follow rigorous testing processes to ensure the functionality, performance, and security of every feature, delivering a product that meets the highest standards.",
+        "Our team works seamlessly to implement the proposed solutions, ensuring minimal disruption to your operations. We focus on efficient integration with existing systems and provide comprehensive training to your staff.",
     },
     {
-      text: "Deployment and Optimization",
+      text: "Continuous Monitoring and Optimization",
       reasons:
-        "Once the development and testing phases are complete, we deploy your website or application to the live environment. Our team continues to monitor performance and optimize for efficiency, ensuring a smooth and seamless user experience.",
+        "Post-implementation, Agrandi Technologies continues to monitor the performance of your IT infrastructure. We proactively identify areas for optimization, recommend updates, and ensure that your technology environment evolves with your business.",
     },
   ];
   return (
     <div className="w-full mb-20">
       <Frame
-        heading={"Website and Application Development"}
+        heading={"IT Consultation"}
         information={
-          "Our team of skilled developers specializes in creating dynamic and user-friendly websites and mobile applications From concept to deployment, we focus on delivering innovative solutions that not only meet but exceed your expectations. Whether you need a sleek and responsive website or a cutting-edge mobile app, we bring your vision to life with precision and creativity."
+          "We offer strategic insights and expert guidance to help your business leverage the latest advancements in technology. Our consulting services encompass everything from system architecture and infrastructure optimization to cybersecurity and digital transformation. With Agrandi, empower your business with the right technology roadmap for sustained growth and success."
         }
-        pic={wireframes.src}
-        img={dev.src}
+        pic={businessBg.src}
+        img={businessMeet.src}
         detail={
-          "At Agrandi Technologies, we transcend boundaries to deliver cutting-edge solutions in website and application development. Our passion lies in crafting digital experiences that not only meet but exceed the expectations of our clients. Whether you're a startup looking to establish your online presence or a seasoned enterprise aiming for digital transformation, our bespoke development services are tailored to elevate your brand to new heights."
+          "In the fast-paced and ever-evolving world of technology, businesses face a myriad of challenges and opportunities. Navigating this digital landscape requires a strategic approach, and that's where Agrandi Technologies steps in as your trusted IT consulting partner. With a wealth of expertise and a commitment to driving innovation, we empower businesses to harness the full potential of technology to achieve their goals."
         }
         subHead={
-          "At Agrandi Technologies, we are passionate about crafting exceptional digital experiences. "
+          "Navigate the ever-evolving landscape of technology with Agrandi Technologies as your trusted IT consulting partner."
         }
         subTopic={
-          "Your Gateway to Innovative Website and Application Development"
+          "Unlocking Business Potential: We are your Trusted IT Consulting Partner"
         }
       />
       <section
@@ -87,12 +87,10 @@ const page = () => {
         style={{ background: colors.lightgray }}
       >
         <h3
-          className="font-medium text-2xl text-center leading-8 tracking-[0.51px] w-[45%] mb-[60px]"
+          className="font-medium text-2xl text-center leading-8 tracking-[0.51px] w-[40%] mb-[60px]"
           style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
         >
-          {
-            "Why Choose Agrandi Technologies for Website and Application Development?"
-          }
+          {"Why Choose Agrandi Technologies for IT Consultation?"}
         </h3>
         <div className="w-full flex flex-row justify-between gap-24 pl-[175px] pr-[198px]">
           <div className="flex flex-col">
@@ -135,14 +133,18 @@ const page = () => {
         <div className="mx-auto" style={{ margin: "0" }}>
           <div className="flex flex-row justify-between items-center md:gap-20 xl:gap-[140px]">
             <div className="flex-grow w-full h-auto">
-              <Image src={sketch} alt="image" style={{ minWidth: 450 }} />
+              <Image
+                src={businessFootImg}
+                alt="image"
+                style={{ minWidth: 450 }}
+              />
             </div>
             <div className="flex-grow w-full h-auto" style={{ minWidth: 300 }}>
               <h3
                 className="font-medium text-2xl tracking-tight leading-9 mb-8"
                 style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
               >
-                Our Development Process
+                Our IT Consultation Process
               </h3>
               <div className="">
                 {devProcess.slice(0, 2).map((left, index) => (

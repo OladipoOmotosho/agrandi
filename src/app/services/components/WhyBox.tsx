@@ -22,7 +22,7 @@ const WhyBox = ({ text, reasons, type }: whyBox) => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row items-start">
+      <div className="flex flex-row items-start gap-6">
         {renderSideBars()}
         <div className="w-full mt-[-40px] pt-9">
           <h4

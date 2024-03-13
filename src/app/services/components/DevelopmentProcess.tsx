@@ -15,7 +15,7 @@ const DevelopmentProcess = ({ text, reasons, type }: whyBox) => {
 
   return (
     <div className="flex flex-col">
-      <div className="flex flex-row items-start">
+      <div className="flex flex-row items-start gap-6">
         {renderSideBars()}
         <div className="w-full mt-[-5px]">
           <h4
@@ -25,7 +25,7 @@ const DevelopmentProcess = ({ text, reasons, type }: whyBox) => {
             {text}
           </h4>
           <p
-            className="font-light text-base text-left leading-[27.8px] tracking-[0.51px] md:w-full xl:w-[90%] 2xl:w-[75%]"
+            className="font-light text-base text-left leading-[27.8px] tracking-[0.51px] md:w-full xl:w-[90%] 2xl:w-[80%]"
             style={{
               color: colors.gray2,
               fontFamily: FONTFAMILY.inter,
