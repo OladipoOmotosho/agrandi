@@ -1,86 +1,93 @@
 import React from "react";
 import Frame from "../components/Frame";
 import Image from "next/image";
-import dev from "../../../../public/assets/images/dev.png";
-import wireframes from "../../../../public/assets/images/wireframes.png";
+import uiUx from "../../../../public/assets/images/uiUx.png";
+import software from "../../../../public/assets/images/software.png";
 import { FONTFAMILY, colors } from "../../../../utils";
 import WhyBox from "../components/WhyBox";
-import sketch from "../../../../public/assets/images/sketch.png";
+import customFooter from "../../../../public/assets/images/customFooter.png";
 import DevelopmentProcess from "../components/DevelopmentProcess";
 
 const page = () => {
   const leftSideDetails = [
     {
-      text: "Unparalleled Expertise",
+      text: "Client-Centric Approach",
       reasons:
-        "At the heart of our success is our team of seasoned developers and designers. With a wealth of experience and a commitment to staying ahead of industry trends, we bring a diverse skill set to every project. From intuitive user interfaces to robust backend systems, we have the expertise to turn your vision into reality.",
+        "Agrandi Technologies believes in placing our clients at the forefront of every project. Our custom software development process begins with a deep understanding of your business objectives, workflow, and challenges. We collaborate closely with you to ensure that the resulting software aligns seamlessly with your vision and operational needs.",
     },
     {
-      text: "Customized Solutions",
+      text: "Scalability and Flexibility",
       reasons:
-        "We understand that one size does not fit all. That's why our approach is centered on understanding your unique requirements and tailoring our solutions accordingly. Whether you need a dynamic website, a feature-rich mobile application, or a comprehensive e-commerce platform, we have the skills to deliver bespoke solutions that align with your business objectives.",
+        "Business environments evolve, and so should your software. Our custom solutions are designed to be scalable and flexible, accommodating changes in user volumes, data loads, and feature requirements. This ensures that your software investment continues to provide value as your business grows and adapts.",
     },
     {
-      text: "Cutting-Edge Technologies",
+      text: "Streamlined Workflows",
       reasons:
-        "In the ever-evolving landscape of technology, staying ahead is key. Agrandi Technologies is committed to harnessing the power of the latest tools and technologies. From responsive web design to scalable cloud-based applications, we leverage innovative solutions to ensure your digital presence remains at the forefront of industry standards.",
+        "We analyze your existing workflows and business processes to identify areas for improvement and optimization. Through custom software development, we create solutions that streamline your operations, reduce redundancies, and enhance overall productivity.",
     },
     {
-      text: "User-Centric Design",
+      text: "Integration with Existing Systems",
       reasons:
-        "User experience is at the core of everything we do. Our design philosophy revolves around creating seamless, intuitive, and visually appealing interfaces that captivate your audience. We understand the importance of a positive user experience in driving engagement and conversion, and we meticulously design every element with this in mind.",
+        "We understands the importance of seamless integration with your existing systems. Whether it's integrating with third-party applications, databases, or other software platforms, our development team ensures that your custom solution functions harmoniously within your technological ecosystem.",
     },
     {
-      text: "Agile Development Methodology",
+      text: "User-Friendly Interfaces",
       reasons:
-        "In a dynamic digital landscape, agility is key. Agrandi Technologies follows agile development practices to ensure flexibility and adaptability throughout the project lifecycle. This approach allows for continuous collaboration, quick iterations, and the ability to respond promptly to changing requirements.",
+        "User adoption is critical for the success of any software solution. Our development team prioritizes the creation of intuitive and user-friendly interfaces. Through iterative design processes, we guarantee that your custom software is not only powerful but also easily navigable, ensuring high user satisfaction.",
     },
     {
-      text: "Comprehensive Support",
+      text: "Data Security and Compliance",
       reasons:
-        "Our commitment to your success doesn't end with the delivery of the final product. Agrandi Technologies provides ongoing support and maintenance to ensure that your website or application continues to perform at its best. Our support team is readily available to address any issues, implement updates, and provide guidance as your digital presence evolves.",
+        "Security is paramount in the digital age. Agrandi Technologies incorporates robust security measures into every phase of custom software development. From data encryption to compliance with industry regulations, we prioritize the protection of your sensitive information.",
     },
   ];
   const devProcess = [
     {
-      text: "Discovery and Planning",
+      text: "Requirement Analysis",
       reasons:
-        "We kick off every project with a thorough discovery phase, where we delve into your goals, target audience, and unique challenges. This lays the foundation for a comprehensive development plan that aligns with your vision and objectives.",
+        "Our process begins with a comprehensive analysis of your business needs and requirements. We work closely with key stakeholders to gather insights into your objectives, challenges, and specific features required for the custom software.",
     },
     {
       text: "Design and Prototyping",
       reasons:
-        "Our design process involves creating visually stunning and user-friendly prototypes. This stage allows you to visualize the end product and provides an opportunity for feedback and refinement before moving into full-scale development.",
+        "Based on the gathered requirements, our team creates detailed design documents and prototypes. This phase allows you to visualize the software's layout, features, and functionalities. We welcome feedback to ensure that the final design aligns perfectly with your expectations.",
     },
     {
       text: "Development and Testing",
       reasons:
-        "With a solid plan and design in place, our development team brings your project to life. We follow rigorous testing processes to ensure the functionality, performance, and security of every feature, delivering a product that meets the highest standards.",
+        "With a solid plan in place, our development team brings your custom software to life. Rigorous testing is conducted throughout the development process to identify and rectify any issues, ensuring the final product meets the highest quality standards.",
     },
     {
-      text: "Deployment and Optimization",
+      text: "Deployment and Training",
       reasons:
-        "Once the development and testing phases are complete, we deploy your website or application to the live environment. Our team continues to monitor performance and optimize for efficiency, ensuring a smooth and seamless user experience.",
+        "Upon successful testing, we deploy the custom software in your environment. Our team provides comprehensive training to your staff, ensuring a smooth transition and effective utilization of the new solution in your day-to-day operations.",
+    },
+    {
+      text: "Ongoing Support and Maintenance",
+      reasons:
+        "Agrandi Technologies is committed to providing ongoing support and maintenance for your custom software. Our support team is readily available to address any issues, implement updates, and ensure the continuous performance and relevance of the solution.",
     },
   ];
   return (
     <div className="w-full mb-20">
       <Frame
-        heading={"Website and Application Development"}
-        information={
-          "Our team of skilled developers specializes in creating dynamic and user-friendly websites and mobile applications From concept to deployment, we focus on delivering innovative solutions that not only meet but exceed your expectations. Whether you need a sleek and responsive website or a cutting-edge mobile app, we bring your vision to life with precision and creativity."
+        heading={
+          <>
+            Custom Software <br /> Development
+          </>
         }
-        pic={wireframes.src}
-        img={dev.src}
+        information={
+          "Agrandi Technologies excels in custom software development, creating applications that align perfectly with your goals. Whether it's streamlining internal processes or enhancing customer experiences, our team delivers scalable and efficient software that grows with your business."
+        }
+        pic={software.src}
+        img={uiUx.src}
         detail={
-          "At Agrandi Technologies, we transcend boundaries to deliver cutting-edge solutions in website and application development. Our passion lies in crafting digital experiences that not only meet but exceed the expectations of our clients. Whether you're a startup looking to establish your online presence or a seasoned enterprise aiming for digital transformation, our bespoke development services are tailored to elevate your brand to new heights."
+          "In the dynamic landscape of modern business, off-the-shelf software may not always align perfectly with the specific requirements of your organization. Agrandi Technologies specializes in custom software development, offering tailored solutions that address your unique challenges, enhance operational efficiency, and propel your business towards innovation and success."
         }
         subHead={
-          "At Agrandi Technologies, we are passionate about crafting exceptional digital experiences. "
+          "Empower your business with bespoke software solutions tailored to your unique needs. "
         }
-        subTopic={
-          "Your Gateway to Innovative Website and Application Development"
-        }
+        subTopic={"Bespoke Software Solutions Tailored to Your Unique Needs"}
       />
       <section
         className="mt-[88px] flex flex-col items-center pt-10 pb-[60px]"
@@ -90,9 +97,7 @@ const page = () => {
           className="font-medium text-2xl text-center leading-8 tracking-[0.51px] w-[45%] mb-[60px]"
           style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
         >
-          {
-            "Why Choose Agrandi Technologies for Website and Application Development?"
-          }
+          {"Why Choose Agrandi Technologies for Custom Software Development?"}
         </h3>
         <div className="w-full flex flex-row justify-between gap-24 pl-[175px] pr-[198px]">
           <div className="flex flex-col">
@@ -133,19 +138,19 @@ const page = () => {
       </section>
       <section className="pt-[140px] md:pl-28 md:pr-28 xl:pl-[198px] xl:pr-[117px]">
         <div className="mx-auto" style={{ margin: "0" }}>
-          <div className="flex flex-row justify-between items-center md:gap-20 xl:gap-[140px]">
-            <div className="flex-grow w-full h-auto">
-              <Image src={sketch} alt="image" style={{ minWidth: 450 }} />
+          <div className="flex flex-row justify-between iitems-start md:gap-20 xl:gap-[140px]">
+            <div className="flex-grow w-full h-auto ">
+              <Image src={customFooter} alt="image" style={{ minWidth: 450 }} />
             </div>
             <div className="flex-grow w-full h-auto" style={{ minWidth: 300 }}>
               <h3
                 className="font-medium text-2xl tracking-tight leading-9 mb-8"
                 style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
               >
-                Our Development Process
+                Our Software Development Process
               </h3>
-              <div className="">
-                {devProcess.slice(0, 2).map((left, index) => (
+              <div>
+                {devProcess.slice(0, 4).map((left, index) => (
                   <DevelopmentProcess
                     key={index}
                     text={left.text}
@@ -155,8 +160,8 @@ const page = () => {
                 ))}
                 {devProcess.length >= 4 && (
                   <DevelopmentProcess
-                    text={devProcess[2].text}
-                    reasons={devProcess[2].reasons}
+                    text={devProcess[4].text}
+                    reasons={devProcess[4].reasons}
                     type={"noLine"}
                   />
                 )}

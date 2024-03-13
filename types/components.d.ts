@@ -157,7 +157,7 @@ type infoBlock = {
   type?: string;
 };
 type frame = {
-  heading: number | string;
+  heading: React.ReactNode;
   information: React.ReactNode;
   pic: string;
   img: string;
