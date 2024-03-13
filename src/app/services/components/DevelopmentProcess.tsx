@@ -2,7 +2,7 @@ import React from "react";
 import { FONTFAMILY, colors } from "../../../../utils";
 import SideBars from "../../../../components/SideBars";
 import star from "../../../../public/assets/icons/star.svg";
-import line2 from "../../../../public/assets/icons/line2.svg";
+import line2 from "../../../../public/assets/icons/Line2.svg";
 
 const DevelopmentProcess = ({ text, reasons, type }: whyBox) => {
   const renderSideBars = () => {
