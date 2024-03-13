@@ -5,7 +5,7 @@ import touch from "../../../../public/assets/images/touch.png";
 import cloud from "../../../../public/assets/images/cloud.png";
 import { FONTFAMILY, colors } from "../../../../utils";
 import WhyBox from "../components/WhyBox";
-import foot from "../../../../public/assets/images/foot.png";
+import cloudFoot from "../../../../public/assets/images/cloudFoot.png";
 import DevelopmentProcess from "../components/DevelopmentProcess";
 
 const page = () => {
@@ -43,34 +43,24 @@ const page = () => {
   ];
   const devProcess = [
     {
-      text: "Discovery and Assessment",
+      text: "Cloud Strategy and Consulting",
       reasons:
-        "We begin with a comprehensive discovery phase, collaborating with key stakeholders to understand your business goals, challenges, and current processes.",
+        "Agrandi Technologies begins by understanding your business goals and objectives. We work with you to develop a tailored cloud strategy, outlining the migration plan, resource optimization, and alignment with your long-term objectives.",
     },
     {
-      text: "Data Collection and Analysis",
+      text: "Cloud Migration and Deployment",
       reasons:
-        "Agrandi Technologies gathers relevant data from various sources, employing advanced analytics to extract meaningful insights. Our analysis encompasses both internal and external factors influencing your business.",
+        "Our team ensures a smooth transition to the cloud, migrating your applications, data, and infrastructure with minimal disruption. We employ best practices to optimize performance and efficiency in the cloud environment.",
     },
     {
-      text: "Process Evaluation",
+      text: "Cloud Security and Compliance",
       reasons:
-        "We conduct a thorough evaluation of your internal processes, identifying areas for improvement, optimization, and increased efficiency. This stage involves collaboration with your team to gain insights into daily operations.",
+        "Security is paramount. Agrandi Technologies implements robust security measures, including data encryption, identity management, and compliance with industry regulations, to safeguard your business-critical information.",
     },
     {
-      text: "Market and Competitive Analysis",
+      text: "Ongoing Support and Optimization",
       reasons:
-        "Through market research and competitive analysis, we provide a detailed understanding of your industry landscape, helping you stay ahead by anticipating market trends and reacting to competitor strategies",
-    },
-    {
-      text: "Technology Assessment",
-      reasons:
-        "Our team assesses your current technology infrastructure, ensuring that it aligns with your business goals. We provide recommendations for technology enhancements or integrations to support your strategic objectives.",
-    },
-    {
-      text: "Strategic Recommendations",
-      reasons:
-        "Agrandi Technologies delivers a comprehensive set of strategic recommendations based on our analysis. These recommendations serve as a roadmap for informed decision-making and long-term planning.",
+        "Our commitment doesn't end with deployment. Agrandi Technologies provides ongoing support, monitoring, and optimization to ensure that your cloud environment continues to meet performance standards and adapts to the evolving needs of your business.",
     },
   ];
   return (
@@ -147,7 +137,7 @@ const page = () => {
         <div className="mx-auto" style={{ margin: "0" }}>
           <div className="flex flex-row justify-between items-start md:gap-20 xl:gap-[140px]">
             <div className="flex-grow w-full h-auto">
-              <Image src={foot} alt="image" style={{ minWidth: 450 }} />
+              <Image src={cloudFoot} alt="image" style={{ minWidth: 450 }} />
             </div>
             <div
               className="flex-grow w-full h-auto mt-[-18px]"
@@ -157,7 +147,7 @@ const page = () => {
                 className="font-medium text-2xl tracking-tight leading-9 mb-8"
                 style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
               >
-                Our Business Analysis Process
+                Our Cloud Computing Services
               </h3>
               <div>
                 {devProcess.slice(0, 5).map((left, index) => (
