@@ -19,3 +19,9 @@
   /* font-weight: 700; */
   font-style: normal;
 }
+body {
+  width: 100%;
+  max-width: 1300px; /* Adjust as needed */
+  margin: 0 auto; /* This centers the container */
+  /* Add other styles as needed */
+}
