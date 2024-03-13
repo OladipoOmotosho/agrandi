@@ -23,30 +23,35 @@ const page = () => {
       information:
         "Navigate the ever-evolving landscape of technology with Agrandi Technologies as your trusted IT consulting partner. We offer strategic insights and expert guidance to help your business leverage the latest advancements in technology. Our consulting services encompass everything from system architecture and infrastructure optimization to cybersecurity and digital transformation. With Agrandi, empower your business with the right technology roadmap for sustained growth and success.",
       img: lady.src,
+      href: "/services/itConsultation",
     },
     {
       heading: "E-Commerce Solutions",
       information:
         "Elevate your online business with Agrandi's tailored e-commerce solutions. From user-friendly interfaces to secure payment gateways, we provide end-to-end services for creating and optimizing your digital storefront. Our team ensures a seamless shopping experience for your customers, driving engagement and boosting sales.",
       img: women.src,
+      href: "/services/eCommerce",
     },
     {
       heading: "Custom Software Development",
       information:
         "Empower your business with bespoke software solutions tailored to your unique needs. Agrandi Technologies excels in custom software development, creating applications that align perfectly with your goals. Whether it's streamlining internal processes or enhancing customer experiences, our team delivers scalable and efficient software that grows with your business.",
       img: htmlDude.src,
+      href: "/services/customSoftware",
     },
     {
       heading: "Business Analysis",
       information:
         "Drive informed decision-making and optimize your processes with Agrandi's business analysis services. Our team of analysts brings a strategic approach to understanding your business objectives, identifying opportunities for improvement, and recommending tailored solutions. Gain valuable insights and stay agile in today's dynamic business landscape.",
       img: analysis.src,
+      href: "/services/businessAnalysis",
     },
     {
       heading: "Cloud Computing Services",
       information:
         "Drive informed decision-making and optimize your processes with Agrandi's business analysis services. Our team of analysts brings a strategic approach to understanding your business objectives, identifying opportunities for improvement, and recommending tailored solutions. Gain valuable insights and stay agile in today's dynamic business landscape.",
       img: digital.src,
+      href: "/services/cloudComputing",
     },
   ];
   return (
