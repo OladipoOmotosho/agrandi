@@ -19,7 +19,7 @@ const GetinTouch = () => {
             Get in touch
           </h3>
           <p
-            className="font-normal text-base text-left leading-[27.8px] tracking-wide md:w-[57%]"
+            className="font-normal text-base text-left leading-[27.8px] tracking-wide xl:w-[87%]"
             style={{ color: colors.black2 }}
           >
             Ready to elevate your digital presence or in need of expert IT

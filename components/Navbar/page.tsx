@@ -24,13 +24,15 @@ const NavBar = () => {
       >
         <div className="flex flex-row justify-between items-center">
           <div className="flex flex-row items-center gap-10">
-            <Image
-              src={agrandi}
-              alt="logo"
-              width={150}
-              height={25}
-              style={{ width: "auto", height: "auto" }}
-            />
+            <Link href={"/"}>
+              <Image
+                src={agrandi}
+                alt="logo"
+                width={150}
+                height={25}
+                style={{ width: "auto", height: "auto" }}
+              />
+            </Link>
             {firstlinks.map((nav, index) => (
               <Link href={nav.link} key={index} className="">
                 <p
