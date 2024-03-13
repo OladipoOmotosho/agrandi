@@ -1,85 +1,99 @@
 import React from "react";
 import Frame from "../components/Frame";
 import Image from "next/image";
-import dev from "../../../../public/assets/images/dev.png";
-import wireframes from "../../../../public/assets/images/wireframes.png";
+import touch from "../../../../public/assets/images/touch.png";
+import cloud from "../../../../public/assets/images/cloud.png";
 import { FONTFAMILY, colors } from "../../../../utils";
 import WhyBox from "../components/WhyBox";
-import sketch from "../../../../public/assets/images/sketch.png";
+import foot from "../../../../public/assets/images/foot.png";
 import DevelopmentProcess from "../components/DevelopmentProcess";
 
 const page = () => {
   const leftSideDetails = [
     {
-      text: "Unparalleled Expertise",
+      text: "Scalability and Flexibility",
       reasons:
-        "At the heart of our success is our team of seasoned developers and designers. With a wealth of experience and a commitment to staying ahead of industry trends, we bring a diverse skill set to every project. From intuitive user interfaces to robust backend systems, we have the expertise to turn your vision into reality.",
+        "Agrandi Technologies understands that business needs are dynamic. Our cloud computing solutions are designed to scale seamlessly, allowing organizations to adapt to changing requirements, whether it's rapid growth or fluctuations in demand. This flexibility ensures that your IT infrastructure can keep pace with the evolving needs of your business..",
     },
     {
-      text: "Customized Solutions",
+      text: "Cost Efficiency",
       reasons:
-        "We understand that one size does not fit all. That's why our approach is centered on understanding your unique requirements and tailoring our solutions accordingly. Whether you need a dynamic website, a feature-rich mobile application, or a comprehensive e-commerce platform, we have the skills to deliver bespoke solutions that align with your business objectives.",
+        "Traditional IT infrastructure often involves significant upfront costs and ongoing maintenance expenses. Cloud computing provides a cost-effective alternative with pay-as-you-go models. Agrandi Technologies helps organizations optimize their IT spending by leveraging cloud resources efficiently, reducing hardware investments, and minimizing operational overhead.",
     },
     {
-      text: "Cutting-Edge Technologies",
+      text: "Accessibility and Collaboration",
       reasons:
-        "In the ever-evolving landscape of technology, staying ahead is key. Agrandi Technologies is committed to harnessing the power of the latest tools and technologies. From responsive web design to scalable cloud-based applications, we leverage innovative solutions to ensure your digital presence remains at the forefront of industry standards.",
+        "Cloud computing facilitates anytime, anywhere access to business applications and data. This accessibility promotes collaboration among remote teams and allows employees to work efficiently from various locations. Agrandi Technologies ensures that your organization embraces the full potential of cloud technology to enhance communication and teamwork.",
     },
     {
-      text: "User-Centric Design",
+      text: "Data Security and Compliance",
       reasons:
-        "User experience is at the core of everything we do. Our design philosophy revolves around creating seamless, intuitive, and visually appealing interfaces that captivate your audience. We understand the importance of a positive user experience in driving engagement and conversion, and we meticulously design every element with this in mind.",
+        "Security is a top priority in the digital age. Agrandi Technologies implements robust security measures to protect your data in the cloud. From encryption to identity management, our solutions adhere to industry standards and compliance requirements, ensuring the confidentiality and integrity of your sensitive information.",
     },
     {
-      text: "Agile Development Methodology",
+      text: "Disaster Recovery and Business Continuity",
       reasons:
-        "In a dynamic digital landscape, agility is key. Agrandi Technologies follows agile development practices to ensure flexibility and adaptability throughout the project lifecycle. This approach allows for continuous collaboration, quick iterations, and the ability to respond promptly to changing requirements.",
+        "Cloud computing offers built-in disaster recovery capabilities, reducing the risk of data loss and downtime. Agrandi Technologies designs comprehensive disaster recovery plans, leveraging cloud infrastructure to ensure quick and efficient recovery in the face of unforeseen events, minimizing business disruptions.",
     },
     {
-      text: "Comprehensive Support",
+      text: "Advanced Technologies Integration",
       reasons:
-        "Our commitment to your success doesn't end with the delivery of the final product. Agrandi Technologies provides ongoing support and maintenance to ensure that your website or application continues to perform at its best. Our support team is readily available to address any issues, implement updates, and provide guidance as your digital presence evolves.",
+        "Staying competitive requires leveraging the latest technologies. Agrandi Technologies integrates cutting-edge solutions like artificial intelligence, machine learning, and analytics into cloud platforms. This integration enhances the functionality and efficiency of your business processes, providing a competitive edge in the market.",
     },
   ];
   const devProcess = [
     {
-      text: "Discovery and Planning",
+      text: "Discovery and Assessment",
       reasons:
-        "We kick off every project with a thorough discovery phase, where we delve into your goals, target audience, and unique challenges. This lays the foundation for a comprehensive development plan that aligns with your vision and objectives.",
+        "We begin with a comprehensive discovery phase, collaborating with key stakeholders to understand your business goals, challenges, and current processes.",
     },
     {
-      text: "Design and Prototyping",
+      text: "Data Collection and Analysis",
       reasons:
-        "Our design process involves creating visually stunning and user-friendly prototypes. This stage allows you to visualize the end product and provides an opportunity for feedback and refinement before moving into full-scale development.",
+        "Agrandi Technologies gathers relevant data from various sources, employing advanced analytics to extract meaningful insights. Our analysis encompasses both internal and external factors influencing your business.",
     },
     {
-      text: "Development and Testing",
+      text: "Process Evaluation",
       reasons:
-        "With a solid plan and design in place, our development team brings your project to life. We follow rigorous testing processes to ensure the functionality, performance, and security of every feature, delivering a product that meets the highest standards.",
+        "We conduct a thorough evaluation of your internal processes, identifying areas for improvement, optimization, and increased efficiency. This stage involves collaboration with your team to gain insights into daily operations.",
     },
     {
-      text: "Deployment and Optimization",
+      text: "Market and Competitive Analysis",
       reasons:
-        "Once the development and testing phases are complete, we deploy your website or application to the live environment. Our team continues to monitor performance and optimize for efficiency, ensuring a smooth and seamless user experience.",
+        "Through market research and competitive analysis, we provide a detailed understanding of your industry landscape, helping you stay ahead by anticipating market trends and reacting to competitor strategies",
+    },
+    {
+      text: "Technology Assessment",
+      reasons:
+        "Our team assesses your current technology infrastructure, ensuring that it aligns with your business goals. We provide recommendations for technology enhancements or integrations to support your strategic objectives.",
+    },
+    {
+      text: "Strategic Recommendations",
+      reasons:
+        "Agrandi Technologies delivers a comprehensive set of strategic recommendations based on our analysis. These recommendations serve as a roadmap for informed decision-making and long-term planning.",
     },
   ];
   return (
     <div className="w-full mb-20">
       <Frame
-        heading={"Website and Application Development"}
-        information={
-          "Our team of skilled developers specializes in creating dynamic and user-friendly websites and mobile applications From concept to deployment, we focus on delivering innovative solutions that not only meet but exceed your expectations. Whether you need a sleek and responsive website or a cutting-edge mobile app, we bring your vision to life with precision and creativity."
+        heading={
+          <>
+            Cloud Computing <br /> Services
+          </>
         }
-        pic={wireframes.src}
-        img={dev.src}
+        information={
+          "From migrating your infrastructure to the cloud to developing cloud-native applications, we provide comprehensive solutions to enhance scalability, flexibility, and cost-efficiency. Harness the power of the cloud with Agrandi Technologies for a competitive edge in the digital era."
+        }
+        pic={cloud.src}
+        img={touch.src}
         detail={
-          "At Agrandi Technologies, we transcend boundaries to deliver cutting-edge solutions in website and application development. Our passion lies in crafting digital experiences that not only meet but exceed the expectations of our clients. Whether you're a startup looking to establish your online presence or a seasoned enterprise aiming for digital transformation, our bespoke development services are tailored to elevate your brand to new heights."
+          "In the era of digital transformation, businesses require scalable, flexible, and secure solutions to stay competitive. Agrandi Technologies is your trusted partner in harnessing the power of cloud computing. Our comprehensive cloud solutions enable organizations to streamline operations, enhance collaboration, and drive innovation in a dynamic and ever-evolving business landscape."
         }
         subHead={
-          "At Agrandi Technologies, we are passionate about crafting exceptional digital experiences. "
+          "Transform the way you do business with Agrandi's cloud computing services"
         }
         subTopic={
-          "Your Gateway to Innovative Website and Application Development"
+          "Transforming Businesses through Innovative Cloud Computing Solutions"
         }
       />
       <section
@@ -87,12 +101,10 @@ const page = () => {
         style={{ background: colors.lightgray }}
       >
         <h3
-          className="font-medium text-2xl text-center leading-8 tracking-[0.51px] w-[45%] mb-[60px]"
+          className="font-medium text-2xl text-center leading-8 tracking-[0.51px] w-[40%] mb-[60px]"
           style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
         >
-          {
-            "Why Choose Agrandi Technologies for Website and Application Development?"
-          }
+          {"Why Choose Agrandi Technologies for Cloud Computing Solutions?"}
         </h3>
         <div className="w-full flex flex-row justify-between gap-24 pl-[175px] pr-[198px]">
           <div className="flex flex-col">
@@ -133,19 +145,22 @@ const page = () => {
       </section>
       <section className="pt-[140px] md:pl-28 md:pr-28 xl:pl-[198px] xl:pr-[117px]">
         <div className="mx-auto" style={{ margin: "0" }}>
-          <div className="flex flex-row justify-between items-center md:gap-20 xl:gap-[140px]">
+          <div className="flex flex-row justify-between items-start md:gap-20 xl:gap-[140px]">
             <div className="flex-grow w-full h-auto">
-              <Image src={sketch} alt="image" style={{ minWidth: 450 }} />
+              <Image src={foot} alt="image" style={{ minWidth: 450 }} />
             </div>
-            <div className="flex-grow w-full h-auto" style={{ minWidth: 300 }}>
+            <div
+              className="flex-grow w-full h-auto mt-[-18px]"
+              style={{ minWidth: 300 }}
+            >
               <h3
                 className="font-medium text-2xl tracking-tight leading-9 mb-8"
                 style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
               >
-                Our Development Process
+                Our Business Analysis Process
               </h3>
               <div>
-                {devProcess.slice(0, 2).map((left, index) => (
+                {devProcess.slice(0, 5).map((left, index) => (
                   <DevelopmentProcess
                     key={index}
                     text={left.text}
@@ -153,10 +168,10 @@ const page = () => {
                     type={"line"}
                   />
                 ))}
-                {devProcess.length >= 4 && (
+                {devProcess.length >= 5 && (
                   <DevelopmentProcess
-                    text={devProcess[2].text}
-                    reasons={devProcess[2].reasons}
+                    text={devProcess[5].text}
+                    reasons={devProcess[5].reasons}
                     type={"noLine"}
                   />
                 )}
