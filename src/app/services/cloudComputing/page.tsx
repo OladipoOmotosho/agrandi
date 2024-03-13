@@ -144,7 +144,7 @@ const page = () => {
               >
                 Our Development Process
               </h3>
-              <div className="">
+              <div>
                 {devProcess.slice(0, 2).map((left, index) => (
                   <DevelopmentProcess
                     key={index}

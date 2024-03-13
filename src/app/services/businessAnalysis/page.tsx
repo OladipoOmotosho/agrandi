@@ -1,11 +1,11 @@
 import React from "react";
 import Frame from "../components/Frame";
 import Image from "next/image";
-import businessMeet from "../../../../public/assets/images/businessMeet.png";
-import businessBg from "../../../../public/assets/images/businessBg.png";
+import handMan from "../../../../public/assets/images/handMan.png";
+import analysisImg from "../../../../public/assets/images/analysisImg.png";
 import { FONTFAMILY, colors } from "../../../../utils";
 import WhyBox from "../components/WhyBox";
-import businessFootImg from "../../../../public/assets/images/businessFootImg.png";
+import foot from "../../../../public/assets/images/foot.png";
 import DevelopmentProcess from "../components/DevelopmentProcess";
 
 const page = () => {
@@ -13,74 +13,82 @@ const page = () => {
     {
       text: "Holistic Approach",
       reasons:
-        "We understand that successful IT consulting goes beyond solving immediate challenges. It involves a holistic understanding of your business, its objectives, and the industry landscape. Our seasoned consultants work closely with you to develop a comprehensive IT strategy that aligns with your business goals and sets the stage for long-term success.",
+        "Our business analysis process begins with a holistic view of your organization. Agrandi Technologies takes the time to understand your business objectives, challenges, and unique market positioning. By examining internal processes and external factors, we provide a comprehensive analysis that forms the foundation for strategic decision-making.",
     },
     {
-      text: "Strategic Planning",
+      text: "Data-Driven Insights",
       reasons:
-        "Our consulting services begin with a thorough analysis of your current IT infrastructure, processes, and challenges. Through strategic planning, we identify opportunities for improvement, optimization, and innovation. Whether you're looking to streamline operations, enhance cybersecurity, or leverage emerging technologies, our consultants craft a roadmap tailored to your unique needs.",
+        "Business decisions are only as good as the data they're based on. Agrandi Technologies leverages advanced analytics and data-driven methodologies to gather, analyze, and interpret relevant information. By turning raw data into actionable insights, we empower organizations to make informed and strategic choices.",
+    },
+    {
+      text: "Process Optimization",
+      reasons:
+        "Efficiency is at the core of successful businesses. Our business analysis services include a detailed examination of your internal processes. We identify bottlenecks, redundancies, and areas for improvement, offering recommendations for process optimization to enhance overall productivity and resource utilization",
+    },
+    {
+      text: "Market Research and Competitive Analysis",
+      reasons:
+        "Staying competitive requires a keen understanding of market dynamics and competitor strategies. Agrandi Technologies conducts thorough market research and competitive analysis, providing you with valuable insights into industry trends, consumer preferences, and the strategies employed by your competitors.",
     },
     {
       text: "Technology Alignment",
       reasons:
-        "The rapidly evolving nature of technology requires businesses to stay agile and adaptive. Agrandi Technologies ensures that your IT infrastructure is aligned with the latest advancements, promoting efficiency and scalability. We assess your current technology stack, recommend upgrades or integrations, and guide you in leveraging the right tools to stay competitive in your industry.",
-    },
-    {
-      text: "Cybersecurity Expertise",
-      reasons:
-        "In an era where data breaches and cyber threats are on the rise, safeguarding your digital assets is paramount. Our IT consultants bring extensive cybersecurity expertise to the table. From risk assessments to implementing robust security measures, we prioritize the protection of your sensitive information, ensuring compliance with industry regulations and bolstering your overall security posture.",
-    },
-    {
-      text: "Scalability and Flexibility",
-      reasons:
-        "Agrandi Technologies understands that business needs are dynamic. Our IT consulting services are designed to be scalable and flexible, allowing you to adapt to changing requirements and market conditions. Whether you're expanding operations, entering new markets, or integrating new technologies, our consultants provide guidance to ensure a seamless and efficient transition.",
-    },
-    {
-      text: "Cost Optimization",
-      reasons:
-        "Effective IT consulting is not just about implementing the latest technologies; it's also about optimizing costs. Agrandi Technologies conducts thorough cost assessments to identify opportunities for optimization without compromising on performance. Our goal is to help you achieve maximum efficiency and ROI from your IT investments.",
-    },
-  ];
-  const devProcess = [
-    {
-      text: "Needs Assessment",
-      reasons:
-        "We begin by understanding your business objectives, challenges, and existing IT landscape. Through in-depth discussions and analysis, our consultants identify areas where technology can drive value and improvement.",
+        "Technology plays a pivotal role in modern business operations. Agrandi Technologies assesses your current technology stack to ensure it aligns with your business objectives. Our recommendations include the integration of new technologies, upgrades, or customization to maximize the impact of your digital infrastructure.",
     },
     {
       text: "Strategic Planning",
       reasons:
-        "Based on the needs assessment, we develop a tailored IT strategy that aligns with your business goals. This includes recommendations for technology upgrades, process improvements, and cybersecurity measures.",
+        "Armed with a deep understanding of your organization and the business landscape, we assist in crafting strategic plans that align with your long-term goals. Our business analysis services provide the foundation for informed decision-making, enabling you to navigate challenges and capitalize on opportunities.",
+    },
+  ];
+  const devProcess = [
+    {
+      text: "Discovery and Assessment",
+      reasons:
+        "We begin with a comprehensive discovery phase, collaborating with key stakeholders to understand your business goals, challenges, and current processes.",
     },
     {
-      text: "Implementation and Integration",
+      text: "Data Collection and Analysis",
       reasons:
-        "Our team works seamlessly to implement the proposed solutions, ensuring minimal disruption to your operations. We focus on efficient integration with existing systems and provide comprehensive training to your staff.",
+        "Agrandi Technologies gathers relevant data from various sources, employing advanced analytics to extract meaningful insights. Our analysis encompasses both internal and external factors influencing your business.",
     },
     {
-      text: "Continuous Monitoring and Optimization",
+      text: "Process Evaluation",
       reasons:
-        "Post-implementation, Agrandi Technologies continues to monitor the performance of your IT infrastructure. We proactively identify areas for optimization, recommend updates, and ensure that your technology environment evolves with your business.",
+        "We conduct a thorough evaluation of your internal processes, identifying areas for improvement, optimization, and increased efficiency. This stage involves collaboration with your team to gain insights into daily operations.",
+    },
+    {
+      text: "Market and Competitive Analysis",
+      reasons:
+        "Through market research and competitive analysis, we provide a detailed understanding of your industry landscape, helping you stay ahead by anticipating market trends and reacting to competitor strategies",
+    },
+    {
+      text: "Technology Assessment",
+      reasons:
+        "Our team assesses your current technology infrastructure, ensuring that it aligns with your business goals. We provide recommendations for technology enhancements or integrations to support your strategic objectives.",
+    },
+    {
+      text: "Strategic Recommendations",
+      reasons:
+        "Agrandi Technologies delivers a comprehensive set of strategic recommendations based on our analysis. These recommendations serve as a roadmap for informed decision-making and long-term planning.",
     },
   ];
   return (
     <div className="w-full mb-20">
       <Frame
-        heading={"IT Consultation"}
+        heading={"Business Analysis"}
         information={
-          "We offer strategic insights and expert guidance to help your business leverage the latest advancements in technology. Our consulting services encompass everything from system architecture and infrastructure optimization to cybersecurity and digital transformation. With Agrandi, empower your business with the right technology roadmap for sustained growth and success."
+          "Our team of analysts brings a strategic approach to understanding your business objectives, identifying opportunities for improvement, and recommending tailored solutions. Gain valuable insights and stay agile in today's dynamic business landscape."
         }
-        pic={businessBg.src}
-        img={businessMeet.src}
+        pic={analysisImg.src}
+        img={handMan.src}
         detail={
-          "In the fast-paced and ever-evolving world of technology, businesses face a myriad of challenges and opportunities. Navigating this digital landscape requires a strategic approach, and that's where Agrandi Technologies steps in as your trusted IT consulting partner. With a wealth of expertise and a commitment to driving innovation, we empower businesses to harness the full potential of technology to achieve their goals."
+          "In the dynamic landscape of business, staying ahead requires a deep understanding of market trends, consumer behavior, and internal operations. Agrandi Technologies offers comprehensive business analysis services designed to provide organizations with the insights needed to make informed decisions, enhance efficiency, and drive strategic growth."
         }
         subHead={
-          "Navigate the ever-evolving landscape of technology with Agrandi Technologies as your trusted IT consulting partner."
+          "Drive informed decision-making and optimize your processes with Agrandi's business analysis services"
         }
-        subTopic={
-          "Unlocking Business Potential: We are your Trusted IT Consulting Partner"
-        }
+        subTopic={"Strategic Business Analysis for Informed Decision-Making"}
       />
       <section
         className="mt-[88px] flex flex-col items-center pt-10 pb-[60px]"
@@ -90,7 +98,7 @@ const page = () => {
           className="font-medium text-2xl text-center leading-8 tracking-[0.51px] w-[40%] mb-[60px]"
           style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
         >
-          {"Why Choose Agrandi Technologies for IT Consultation?"}
+          {"Why Choose Agrandi Technologies for Business Analysis?"}
         </h3>
         <div className="w-full flex flex-row justify-between gap-24 pl-[175px] pr-[198px]">
           <div className="flex flex-col">
@@ -131,23 +139,22 @@ const page = () => {
       </section>
       <section className="pt-[140px] md:pl-28 md:pr-28 xl:pl-[198px] xl:pr-[117px]">
         <div className="mx-auto" style={{ margin: "0" }}>
-          <div className="flex flex-row justify-between items-center md:gap-20 xl:gap-[140px]">
+          <div className="flex flex-row justify-between items-start md:gap-20 xl:gap-[140px]">
             <div className="flex-grow w-full h-auto">
-              <Image
-                src={businessFootImg}
-                alt="image"
-                style={{ minWidth: 450 }}
-              />
+              <Image src={foot} alt="image" style={{ minWidth: 450 }} />
             </div>
-            <div className="flex-grow w-full h-auto" style={{ minWidth: 300 }}>
+            <div
+              className="flex-grow w-full h-auto mt-[-18px]"
+              style={{ minWidth: 300 }}
+            >
               <h3
                 className="font-medium text-2xl tracking-tight leading-9 mb-8"
                 style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
               >
-                Our IT Consultation Process
+                Our Business Analysis Process
               </h3>
-              <div className="">
-                {devProcess.slice(0, 2).map((left, index) => (
+              <div>
+                {devProcess.slice(0, 5).map((left, index) => (
                   <DevelopmentProcess
                     key={index}
                     text={left.text}
@@ -155,10 +162,10 @@ const page = () => {
                     type={"line"}
                   />
                 ))}
-                {devProcess.length >= 4 && (
+                {devProcess.length >= 5 && (
                   <DevelopmentProcess
-                    text={devProcess[2].text}
-                    reasons={devProcess[2].reasons}
+                    text={devProcess[5].text}
+                    reasons={devProcess[5].reasons}
                     type={"noLine"}
                   />
                 )}
