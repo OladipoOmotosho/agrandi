@@ -1,8 +1,8 @@
-"use client";
 import React from "react";
 import { FONTFAMILY, colors } from "../utils";
 import CustomButton from "./CustomButton";
 import Image from "next/image";
+import Link from "next/link";
 
 const InfoBlock = ({
   heading,
@@ -10,6 +10,7 @@ const InfoBlock = ({
   img,
   className,
   type,
+  href,
 }: infoBlock) => {
   return (
     <div className={className}>
@@ -19,7 +20,7 @@ const InfoBlock = ({
             {heading}
           </h4>
           <p
-            className="font-light text-base text-left leading-[27.8px] tracking-wide w-4/5"
+            className="font-light text-base text-left leading-[27.8px] tracking-wide 2xl:w-4/5"
             style={{
               color: colors.gray2,
               fontFamily: FONTFAMILY.inter,
@@ -30,23 +31,22 @@ const InfoBlock = ({
           </p>
         </div>
         <div>
-          {type === "services" ? (
-            <CustomButton
-              text={"Learn more"}
-              disabled={false}
-              fontSize={16}
-              fontWeight={500}
-              paddingBottom={12}
-              paddingTop={12}
-              paddingLeft={24}
-              paddingRight={24}
-              borderRadius={10}
-              fontFamily={FONTFAMILY.dmSans}
-              className={"tracking-wider"}
-              href="/services/websiteDevelopment"
-            />
-          ) : (
-            type === "about" && ""
+          {href && type === "services" && (
+            <Link href={href}>
+              <CustomButton
+                text={"Learn more"}
+                disabled={false}
+                fontSize={16}
+                fontWeight={500}
+                paddingBottom={12}
+                paddingTop={12}
+                paddingLeft={24}
+                paddingRight={24}
+                borderRadius={10}
+                fontFamily={FONTFAMILY.dmSans}
+                className={"tracking-wider"}
+              />
+            </Link>
           )}
         </div>
       </div>
@@ -58,7 +58,7 @@ const InfoBlock = ({
           height={419}
           // className="lg:min-w-[650px]"
           quality={90}
-          style={{ width: "auto", height: "auto" }}
+          // style={{ width: "auto", height: "auto" }}
         />
       </div>
     </div>

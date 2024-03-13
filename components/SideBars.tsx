@@ -7,7 +7,13 @@ const SideBars = ({ img1, img2, type, className }: sideBars) => {
       <div className="grid grid-flow-row gap-0 justify-items-center">
         <Image src={img1} alt="image" />
         {type === "line" ? (
-          <Image src={img2} alt="image" className={`h-[200px] ${className}`} />
+          <Image
+            src={img2}
+            alt="image"
+            width={2}
+            height={200}
+            className={`h-[200px] ${className}`}
+          />
         ) : (
           type === "noLine" && ""
         )}

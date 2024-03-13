@@ -26,32 +26,30 @@ const CustomButton = ({
   const { windowSize, isMobile, isTablet, isDesktop } = useScreenSize();
 
   return (
-    <a href={href}>
-      <button
-        disabled={disabled}
-        style={{
-          opacity: disabled ? "40%" : "100%",
-          backgroundColor: background,
-          borderRadius: borderRadius,
-          textAlign: "center",
-          width: width,
-          height: height,
-          paddingTop: paddingTop,
-          paddingBottom: paddingBottom,
-          paddingLeft: paddingLeft,
-          paddingRight: paddingRight,
-          color: color,
-          border: border,
-          fontFamily: fontFamily,
-          fontSize: fontSize,
-          fontWeight: fontWeight,
-        }}
-        className={`${className} text-white flex flex-row justify-center items-center`}
-        onClick={loading || disabled ? () => null : onClick}
-      >
-        {text}
-      </button>
-    </a>
+    <button
+      disabled={disabled}
+      style={{
+        opacity: disabled ? "40%" : "100%",
+        backgroundColor: background,
+        borderRadius: borderRadius,
+        textAlign: "center",
+        width: width,
+        height: height,
+        paddingTop: paddingTop,
+        paddingBottom: paddingBottom,
+        paddingLeft: paddingLeft,
+        paddingRight: paddingRight,
+        color: color,
+        border: border,
+        fontFamily: fontFamily,
+        fontSize: fontSize,
+        fontWeight: fontWeight,
+      }}
+      className={`${className} text-white flex flex-row justify-center items-center`}
+      onClick={loading || disabled ? () => null : onClick}
+    >
+      {text}
+    </button>
   );
 };
 

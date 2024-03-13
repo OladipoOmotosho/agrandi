@@ -47,7 +47,7 @@ const Frame = ({
           </p>
         </div>
       </section>
-      <section className="mx-8 flex flex-row mt-[140px] pr-[84px] pl-[116px]">
+      <section className="mx-8 flex flex-row items-center mt-[140px] pr-[84px] pl-[116px]">
         <div className="w-full flex flex-col gap-5 pt-6">
           <h4
             className="text-2xl font-semibold leading-8 tracking-[0.51px] w-3/4"
@@ -74,7 +74,7 @@ const Frame = ({
             width={604}
             height={419}
             quality={90}
-            style={{ width: "auto", height: "auto" }}
+            // style={{ width: "auto", height: "auto" }}
           />
         </div>
       </section>

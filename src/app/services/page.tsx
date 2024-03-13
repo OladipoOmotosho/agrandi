@@ -16,6 +16,7 @@ const page = () => {
       information:
         "At Agrandi Technologies, we are passionate about crafting exceptional digital experiences. Our team of skilled developers specializes in creating dynamic and user-friendly websites and mobile applications. From concept to deployment, we focus on delivering innovative solutions that not only meet but exceed your expectations. Whether you need a sleek and responsive website or a cutting-edge mobile app, we bring your vision to life with precision and creativity.",
       img: flowChart.src,
+      href: "/services/websiteDevelopment",
     },
     {
       heading: "IT Consultation",
@@ -63,6 +64,7 @@ const page = () => {
             heading={detail.heading}
             information={detail.information}
             img={detail.img}
+            href={detail.href}
             className={`flex ${
               index % 2 === 0 ? "flex-row" : "flex-row-reverse"
             } justify-between items-center gap-24`}

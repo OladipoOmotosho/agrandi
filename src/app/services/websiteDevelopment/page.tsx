@@ -5,6 +5,8 @@ import dev from "../../../../public/assets/images/dev.png";
 import wireframes from "../../../../public/assets/images/wireframes.png";
 import { FONTFAMILY, colors } from "../../../../utils";
 import WhyBox from "../components/WhyBox";
+import sketch from "../../../../public/assets/images/sketch.png";
+import DevelopmentProcess from "../components/DevelopmentProcess";
 
 const page = () => {
   const leftSideDetails = [
@@ -39,8 +41,30 @@ const page = () => {
         "Our commitment to your success doesn't end with the delivery of the final product. Agrandi Technologies provides ongoing support and maintenance to ensure that your website or application continues to perform at its best. Our support team is readily available to address any issues, implement updates, and provide guidance as your digital presence evolves.",
     },
   ];
+  const devProcess = [
+    {
+      text: "Discovery and Planning",
+      reasons:
+        "We kick off every project with a thorough discovery phase, where we delve into your goals, target audience, and unique challenges. This lays the foundation for a comprehensive development plan that aligns with your vision and objectives.",
+    },
+    {
+      text: "Design and Prototyping",
+      reasons:
+        "Our design process involves creating visually stunning and user-friendly prototypes. This stage allows you to visualize the end product and provides an opportunity for feedback and refinement before moving into full-scale development.",
+    },
+    {
+      text: "Development and Testing",
+      reasons:
+        "With a solid plan and design in place, our development team brings your project to life. We follow rigorous testing processes to ensure the functionality, performance, and security of every feature, delivering a product that meets the highest standards.",
+    },
+    {
+      text: "Deployment and Optimization",
+      reasons:
+        "Once the development and testing phases are complete, we deploy your website or application to the live environment. Our team continues to monitor performance and optimize for efficiency, ensuring a smooth and seamless user experience.",
+    },
+  ];
   return (
-    <div className="">
+    <div className="w-full mb-20">
       <Frame
         heading={"Website and Application Development"}
         information={
@@ -70,7 +94,7 @@ const page = () => {
             "Why Choose Agrandi Technologies for Website and Application Development?"
           }
         </h3>
-        <div className="w-full flex flex-row justify-between gap-10 pl-[175px] pr-[198px]">
+        <div className="w-full flex flex-row justify-between gap-24 pl-[175px] pr-[198px]">
           <div className="flex flex-col">
             {leftSideDetails.slice(0, 2).map((left, index) => (
               <WhyBox
@@ -104,6 +128,40 @@ const page = () => {
                 type={"noLine"}
               />
             )}
+          </div>
+        </div>
+      </section>
+      <section className="pt-[140px] md:pl-28 md:pr-28 xl:pl-[198px] xl:pr-[117px]">
+        <div className="mx-auto" style={{ margin: "0" }}>
+          <div className="flex flex-row justify-between items-center md:gap-20 xl:gap-[140px]">
+            <div className="flex-grow w-full h-auto">
+              <Image src={sketch} alt="image" style={{ minWidth: 450 }} />
+            </div>
+            <div className="flex-grow w-full h-auto" style={{ minWidth: 300 }}>
+              <h3
+                className="font-medium text-2xl tracking-tight leading-9 mb-8"
+                style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
+              >
+                Our Development Process
+              </h3>
+              <div className="">
+                {devProcess.slice(0, 2).map((left, index) => (
+                  <DevelopmentProcess
+                    key={index}
+                    text={left.text}
+                    reasons={left.reasons}
+                    type={"line"}
+                  />
+                ))}
+                {devProcess.length >= 4 && (
+                  <DevelopmentProcess
+                    text={devProcess[2].text}
+                    reasons={devProcess[2].reasons}
+                    type={"noLine"}
+                  />
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </section>

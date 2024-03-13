@@ -1,22 +1,15 @@
 import React from "react";
 import { FONTFAMILY, colors } from "../../../../utils";
 import SideBars from "../../../../components/SideBars";
-import circle from "../../../../public/assets/icons/circle.svg";
-import line from "../../../../public/assets/icons/line.svg";
+import star from "../../../../public/assets/icons/star.svg";
+import line2 from "../../../../public/assets/icons/line2.svg";
 
-const WhyBox = ({ text, reasons, type }: whyBox) => {
+const DevelopmentProcess = ({ text, reasons, type }: whyBox) => {
   const renderSideBars = () => {
     if (type === "noLine") {
-      return <SideBars img1={circle} img2={line} type="noLine" />;
+      return <SideBars img1={star} img2={line2} type="noLine" />;
     } else {
-      return (
-        <SideBars
-          img1={circle}
-          img2={line}
-          type="line"
-          className={"h-[231px] w-auto"}
-        />
-      );
+      return <SideBars img1={star} img2={line2} type="line" />;
     }
   };
 
@@ -24,7 +17,7 @@ const WhyBox = ({ text, reasons, type }: whyBox) => {
     <div className="flex flex-col">
       <div className="flex flex-row items-start">
         {renderSideBars()}
-        <div className="w-full mt-[-40px] pt-9">
+        <div className="w-full mt-[-5px]">
           <h4
             className="text-xl font-medium leading-8 tracking-[0.51px]"
             style={{ fontFamily: FONTFAMILY.inter, color: colors.gray3 }}
@@ -32,7 +25,7 @@ const WhyBox = ({ text, reasons, type }: whyBox) => {
             {text}
           </h4>
           <p
-            className="font-light text-base text-left leading-[27.8px] tracking-[0.51px]"
+            className="font-light text-base text-left leading-[27.8px] tracking-[0.51px] md:w-full xl:w-[90%] 2xl:w-[75%]"
             style={{
               color: colors.gray2,
               fontFamily: FONTFAMILY.inter,
@@ -47,4 +40,4 @@ const WhyBox = ({ text, reasons, type }: whyBox) => {
   );
 };
 
-export default WhyBox;
+export default DevelopmentProcess;

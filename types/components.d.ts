@@ -153,6 +153,7 @@ type infoBlock = {
   information: React.ReactNode;
   img: string;
   className: any;
+  href?: any;
   type?: string;
 };
 type frame = {
