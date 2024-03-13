@@ -40,6 +40,7 @@ const Service = () => {
             alt="code"
             className="md:min-w-[600px]"
             style={{ width: "auto", height: "auto" }}
+            priority
           />
         </div>
       </section>
@@ -74,6 +75,7 @@ const Service = () => {
             alt=""
             className="mt-[109px] lg:min-w-[650px]"
             style={{ width: "auto", height: "auto" }}
+            priority
           />
         </div>
       </section>

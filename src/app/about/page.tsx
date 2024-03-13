@@ -45,7 +45,7 @@ const page = () => {
   return (
     <div className="mb-[146px]">
       <div className="mx-8">
-        <Image src={aboutBg} alt="backgroundImage" quality={90} />
+        <Image src={aboutBg} alt="backgroundImage" quality={90} priority />
       </div>
       <div className="mb-[92px]">
         <section className="flex flex-row justify-between 2xl:justify-center 2xl:gap-44">

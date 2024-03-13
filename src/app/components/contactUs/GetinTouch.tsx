@@ -34,7 +34,7 @@ const GetinTouch = () => {
             className="p-4 rounded-full w-20 h-20"
             style={{ background: colors.blue }}
           >
-            <Image src={arrow} alt="arrow" />
+            <Image src={arrow} alt="arrow" priority />
           </div>
         </div>
       </section>

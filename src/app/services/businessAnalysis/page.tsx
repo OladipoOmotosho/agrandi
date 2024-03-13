@@ -141,7 +141,12 @@ const page = () => {
         <div className="mx-auto" style={{ margin: "0" }}>
           <div className="flex flex-row justify-between items-start md:gap-20 xl:gap-[140px]">
             <div className="flex-grow w-full h-auto">
-              <Image src={foot} alt="image" style={{ minWidth: 450 }} />
+              <Image
+                src={foot}
+                alt="image"
+                style={{ minWidth: 450 }}
+                priority
+              />
             </div>
             <div
               className="flex-grow w-full h-auto mt-[-18px]"

@@ -56,9 +56,8 @@ const InfoBlock = ({
           alt="image"
           width={604}
           height={419}
-          // className="lg:min-w-[650px]"
+          priority
           quality={90}
-          // style={{ width: "auto", height: "auto" }}
         />
       </div>
     </div>

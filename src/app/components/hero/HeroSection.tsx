@@ -35,7 +35,7 @@ const HeroSection = () => {
     <main className="mt-10 ">
       <section className="px-8">
         <div className="flex flex-row justify-center">
-          <Image src={heroBg} alt="bg" className={styles.hero} />
+          <Image src={heroBg} alt="bg" className={styles.hero} priority />
         </div>
         <div className="mt-[-620px] flex flex-col items-center gap-4">
           <h2 className="font-medium text-center text-7xl tracking-tight w-1/2 leading-[108px]">
@@ -64,6 +64,7 @@ const HeroSection = () => {
             width={767}
             height={417}
             style={{ width: 767, height: "auto" }}
+            priority
           />
           <Image
             src={person}
@@ -72,6 +73,7 @@ const HeroSection = () => {
             height={417}
             className="ml-[-80px]"
             style={{ width: 423, height: "auto" }}
+            priority
           />
         </div>
       </section>
@@ -91,6 +93,7 @@ const HeroSection = () => {
               width={200}
               height={200}
               style={{ width: "auto", height: "auto" }}
+              priority
             />
           ))}
         </div>

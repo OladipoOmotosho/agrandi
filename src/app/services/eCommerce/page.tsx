@@ -142,6 +142,7 @@ const page = () => {
                 src={commerceFootImg}
                 alt="image"
                 style={{ minWidth: 450 }}
+                priority
               />
             </div>
             <div className="flex-grow w-full h-auto" style={{ minWidth: 300 }}>

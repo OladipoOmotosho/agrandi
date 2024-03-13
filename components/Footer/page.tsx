@@ -23,6 +23,7 @@ const Footer = () => {
             width={150}
             height={25}
             style={{ width: "auto", height: "auto" }}
+            loading="lazy"
           />
         </p>
       </div>

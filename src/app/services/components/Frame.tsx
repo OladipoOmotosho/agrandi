@@ -29,7 +29,7 @@ const Frame = ({
             width={1380}
             height={625}
             sizes="(max-width: 1024px) 100vw, (max-width: 1440px) 100vw, 100vw"
-            loading="lazy"
+            priority
           />
         </div>
         <div className="flex flex-col gap-4 mt-[60px] mx-[160px]">
@@ -74,7 +74,7 @@ const Frame = ({
             width={604}
             height={419}
             quality={90}
-            // style={{ width: "auto", height: "auto" }}
+            priority
           />
         </div>
       </section>
