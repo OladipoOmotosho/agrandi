@@ -14,7 +14,7 @@ const WhyBox = ({ text, reasons, type }: whyBox) => {
           img1={circle}
           img2={line}
           type="line"
-          className={"h-[301px] w-auto"}
+          className={"h-[335px] w-auto"}
         />
       );
     }

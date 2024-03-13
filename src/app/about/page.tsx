@@ -48,7 +48,7 @@ const page = () => {
         <Image src={aboutBg} alt="backgroundImage" quality={90} priority />
       </div>
       <div className="mb-[92px]">
-        <section className="flex flex-row justify-between 2xl:justify-center 2xl:gap-44">
+        <section className="flex flex-row justify-between 2xl:justify-center 2xl:gap-44 gap-16">
           <div
             className="p-8 rounded-[20px] max-w-[509px] mt-[-110px] ml-[148px]"
             style={{ background: colors.lightgray }}

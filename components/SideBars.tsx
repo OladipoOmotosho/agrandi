@@ -11,7 +11,7 @@ const SideBars = ({ img1, img2, type, className }: sideBars) => {
             src={img2}
             alt="image"
             width={2}
-            height={200}
+            height={230}
             className={`h-[200px] ${className}`}
           />
         ) : (
