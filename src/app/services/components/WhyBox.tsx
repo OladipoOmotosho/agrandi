@@ -14,7 +14,7 @@ const WhyBox = ({ text, reasons, type }: whyBox) => {
           img1={circle}
           img2={line}
           type="line"
-          className={"h-[231px] w-auto"}
+          className={"h-[301px] w-auto"}
         />
       );
     }
@@ -24,7 +24,7 @@ const WhyBox = ({ text, reasons, type }: whyBox) => {
     <div className="flex flex-col">
       <div className="flex flex-row items-start gap-6">
         {renderSideBars()}
-        <div className="w-full mt-[-40px] pt-9">
+        <div className="w-full mt-[-40px] pt-9 pb-6">
           <h4
             className="text-xl font-medium leading-8 tracking-[0.51px]"
             style={{ fontFamily: FONTFAMILY.inter, color: colors.gray3 }}
