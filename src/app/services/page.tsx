@@ -4,7 +4,7 @@ import InfoBlock from "../../../components/InfoBlock";
 import htmlDude from "../../../public/assets/images/htmlDude.png";
 import lady from "../../../public/assets/images/lady.png";
 import women from "../../../public/assets/images/women.png";
-import flowChart from "../../../public/assets/images/flowChart.png";
+import flowChart from "../../../public/assets/images/coding.png";
 import digital from "../../../public/assets/images/digital.png";
 import analysis from "../../../public/assets/images/analysis.png";
 import { colors } from "../../../utils";

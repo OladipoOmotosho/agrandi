@@ -51,17 +51,19 @@ const NavBar = () => {
               </Link>
             ))}
           </div>
-          <CustomButton
-            text={"Get in touch"}
-            disabled={false}
-            fontSize={16}
-            fontWeight={500}
-            paddingBottom={12}
-            paddingTop={12}
-            paddingLeft={24}
-            paddingRight={24}
-            borderRadius={10}
-          />
+          <Link href={"/contactUs"}>
+            <CustomButton
+              text={"Get in touch"}
+              disabled={false}
+              fontSize={16}
+              fontWeight={500}
+              paddingBottom={12}
+              paddingTop={12}
+              paddingLeft={24}
+              paddingRight={24}
+              borderRadius={10}
+            />
+          </Link>
         </div>
       </div>
     </>

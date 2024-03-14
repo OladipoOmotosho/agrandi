@@ -24,3 +24,55 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
+
+.customTextInputContainer {
+  background: inherit;
+}
+.customInput {
+  background: inherit;
+  outline: none;
+  color: #3b3b3b;
+}
+
+.customInput::placeholder {
+  color: #b3b3b6;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.15399999916553497px;
+  text-align: left;
+}
+.customTextArea {
+  padding: 15px 12px;
+  background: inherit;
+  outline: none;
+  color: #3b3b3b;
+  width: 464px;
+  height: 143px;
+  top: 28px;
+  padding: 15.5px, 327px, 107.5px, 12px;
+  border-radius: 6px;
+  border: 1px solid #dadada;
+}
+
+.customTextArea::placeholder {
+  color: #b3b3b6;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.15399999916553497px;
+  text-align: left;
+}
+
+.customLabel {
+  background-color: inherit;
+  color: #8d8d91;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.15399999916553497px;
+  text-align: left;
+}

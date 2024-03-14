@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 
 const useScreenSize = () => {
-  const isClient = typeof window === "object"; // Check if window is defined
+  const isClient = typeof window === "object";
 
   const [windowSize, setWindowSize] = useState({
     width: isClient ? window.innerWidth : undefined,
@@ -11,7 +11,7 @@ const useScreenSize = () => {
 
   useEffect(() => {
     if (!isClient) {
-      return; // Exit early if running on server-side
+      return;
     }
 
     const handleResize = () => {

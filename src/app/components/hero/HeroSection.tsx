@@ -11,6 +11,7 @@ import catalog from "../../../../public/assets/icons/companys/catalog.svg";
 import quotient from "../../../../public/assets/icons/companys/quotient.svg";
 import circooles from "../../../../public/assets/icons/companys/circooles.svg";
 import { colors } from "../../../../utils";
+import Link from "next/link";
 
 const HeroSection = () => {
   const logos = [
@@ -45,17 +46,19 @@ const HeroSection = () => {
             We help businesses improve bottom-line efficiency and focus on what
             matters most
           </p>
-          <CustomButton
-            text={"Get in touch"}
-            disabled={false}
-            fontSize={16}
-            fontWeight={500}
-            paddingBottom={12}
-            paddingTop={12}
-            paddingLeft={24}
-            paddingRight={24}
-            borderRadius={10}
-          />
+          <Link href={"/contactUs"}>
+            <CustomButton
+              text={"Get in touch"}
+              disabled={false}
+              fontSize={16}
+              fontWeight={500}
+              paddingBottom={12}
+              paddingTop={12}
+              paddingLeft={24}
+              paddingRight={24}
+              borderRadius={10}
+            />
+          </Link>
         </div>
         <div className="flex flex-row justify-center mt-[-3] px-[108px]">
           <Image

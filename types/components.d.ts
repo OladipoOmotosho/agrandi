@@ -28,15 +28,22 @@ type ClickEvent = {
   setRoute: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-type CustomTextInput = {
+type CustomTextInputProps = {
   placeholder: string;
   value: string | number;
-  setValue: any;
+  setValue: React.Dispatch<React.SetStateAction<string | number>>;
   type?: string;
   label: string;
   className?: string;
+  inputClassName?: string;
+  labelClassName?: string;
+  placeholderClassName?: string;
   width?: number;
   height?: number;
+  inputStyle?: React.CSSProperties;
+  labelStyle?: React.CSSProperties;
+  placeholderStyle?: React.CSSProperties;
+  borderColor?: string;
 };
 
 type CustomButton = {
