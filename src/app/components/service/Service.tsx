@@ -45,7 +45,7 @@ const Service = () => {
         </div>
       </section>
       <section
-        className="mx-[100px] flex flex-row xl:flex xl:flex-row xl:justify-between items-end xl:pt-20 pl-20 pb-0 rounded-[40px] mt-[140px]"
+        className="mx-[100px] flex flex-row xl:flex xl:flex-row xl:justify-between items-end 2xl:pt-20 pl-20 pb-0 rounded-[40px] mt-[140px]"
         style={{ background: colors.deepBlue }}
       >
         <div className="w-full pb-[78px] flex flex-col gap-3 lg:min-w-[500px] sm:pt-20">
@@ -57,7 +57,7 @@ const Service = () => {
           </h3>
           <p
             style={{ color: colors.white }}
-            className="font-normal text-base leading-[27.8px] tracking-wide md:w-4/5"
+            className="font-normal text-base leading-[27.8px] tracking-wide 2xl:w-4/5"
           >
             Navigate the ever-evolving landscape of technology with Agrandi
             Technologies as your trusted IT consulting partner. We offer
@@ -69,7 +69,7 @@ const Service = () => {
             technology roadmap for sustained growth and success.
           </p>
         </div>
-        <div className="w-full 2xl:ml-5">
+        <div className="w-full 2xl:ml-4">
           <Image
             src={boyGirl}
             alt=""
