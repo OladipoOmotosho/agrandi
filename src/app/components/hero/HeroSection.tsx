@@ -34,14 +34,29 @@ const HeroSection = () => {
 
   return (
     <main className="mt-10 ">
-      <section className="px-8">
+      {/* <section className="relative xl:px-8">
         <div className="flex flex-row justify-center">
           <Image src={heroBg} alt="bg" className={styles.hero} priority />
         </div>
-        <div className="mt-[-620px] flex flex-col items-center gap-4">
-          <h2 className="font-medium text-center text-7xl tracking-tight w-1/2 leading-[108px]">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
+          <h2 className="font-medium text-center text-4xl xl:text-7xl tracking-tight w-1/2 xl:leading-[108px]">
             We build products people love
           </h2>
+          <p className="font-normal text-center text-xl w-[38%] leading-8">
+            We help businesses improve bottom-line efficiency and focus on what
+            matters most
+          </p>
+        </div>
+      </section> */}
+      <section className="relative lg:px-8">
+        <div className="flex flex-row justify-center">
+          <Image src={heroBg} alt="bg" className={styles.hero} priority />
+        </div>
+        <div className="absolute inset-0 pt-20 flex flex-col items-center gap-4">
+          <span className="font-medium text-center text-4xl lg:text-7xl flex flex-col gap-10">
+            <h2>We build products</h2>
+            <h2>people love</h2>
+          </span>
           <p className="font-normal text-center text-xl w-[38%] leading-8">
             We help businesses improve bottom-line efficiency and focus on what
             matters most
@@ -59,25 +74,26 @@ const HeroSection = () => {
               borderRadius={10}
             />
           </Link>
-        </div>
-        <div className="flex flex-row justify-center mt-[-3] px-[108px]">
-          <Image
-            src={people}
-            alt="people"
-            width={767}
-            height={417}
-            style={{ width: 767, height: "auto" }}
-            priority
-          />
-          <Image
-            src={person}
-            alt="person"
-            width={423}
-            height={417}
-            className="ml-[-80px]"
-            style={{ width: 423, height: "auto" }}
-            priority
-          />
+
+          <div className="flex md:flex-row flex-col justify-center">
+            <Image
+              src={people}
+              alt="people"
+              width={767}
+              height={417}
+              style={{ width: 767, height: "auto" }}
+              priority
+            />
+            <Image
+              src={person}
+              alt="person"
+              width={423}
+              height={417}
+              className="ml-[-80px]"
+              style={{ width: 423, height: "auto" }}
+              priority
+            />
+          </div>
         </div>
       </section>
       <section

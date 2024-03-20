@@ -76,3 +76,10 @@ body {
   letter-spacing: -0.15399999916553497px;
   text-align: left;
 }
+
+/* @media screen and (min-width: 1024px) and (max-width: 1199px) {
+  body {
+    transform: scale(0.9);
+    transform-origin: top left; 
+  }
+} */

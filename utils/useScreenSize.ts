@@ -25,7 +25,7 @@ const useScreenSize = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, [isClient]);
 
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useMediaQuery({ minWidth: 320, maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   const isDesktop = useMediaQuery({ minWidth: 1024 });
 

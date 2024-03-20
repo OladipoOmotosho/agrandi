@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import coding from "../../../../public/assets/images/coding.png";
-import { FONTFAMILY, colors } from "../../../../utils";
+import { colors } from "../../../../utils";
 import boyGirl from "../../../../public/assets/images/boyGirl.png";
 const Service = () => {
   return (
