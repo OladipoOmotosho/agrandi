@@ -18,10 +18,9 @@
 
 @media screen and (min-width: 324px) and (max-width: 767px) {
   .hero {
-    width: 343px;
+    max-width: 343px;
     height: 376px;
     gap: 0px;
     border-radius: 24px;
-    opacity: 0px;
   }
 }

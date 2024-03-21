@@ -77,9 +77,8 @@ body {
   text-align: left;
 }
 
-/* @media screen and (min-width: 1024px) and (max-width: 1199px) {
+/* @media screen and (min-width: 324px) and (max-width: 767px) {
   body {
-    transform: scale(0.9);
-    transform-origin: top left; 
+    padding: 0px 16px;
   }
 } */

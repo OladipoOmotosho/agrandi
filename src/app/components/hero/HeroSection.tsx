@@ -5,21 +5,26 @@ import styles from "./hero.module.css";
 import CustomButton from "../../../../components/CustomButton";
 import people from "../../../../public/assets/images/people.png";
 import person from "../../../../public/assets/images/person.png";
+import person2 from "../../../../public/assets/images/person2.png";
 import layers from "../../../../public/assets/icons/companys/layers.svg";
 import sisyphus from "../../../../public/assets/icons/companys/sisyphus.svg";
 import catalog from "../../../../public/assets/icons/companys/catalog.svg";
 import quotient from "../../../../public/assets/icons/companys/quotient.svg";
 import circooles from "../../../../public/assets/icons/companys/circooles.svg";
-import { colors } from "../../../../utils";
+import { FONTFAMILY, colors } from "../../../../utils";
 import Link from "next/link";
+import useScreenSize from "../../../../utils/useScreenSize";
 
 const HeroSection = () => {
+  const { isMobile, isTablet } = useScreenSize();
+  const isDesktopOrTablet = isTablet || !isMobile;
+
   const logos = [
     {
-      logo: layers,
+      logo: isDesktopOrTablet ? layers : "",
     },
     {
-      logo: sisyphus,
+      logo: isDesktopOrTablet && sisyphus,
     },
     {
       logo: circooles,
@@ -28,39 +33,39 @@ const HeroSection = () => {
       logo: catalog,
     },
     {
-      logo: quotient,
+      logo: isDesktopOrTablet && quotient,
     },
   ];
 
   return (
     <main className="mt-10 ">
-      {/* <section className="relative xl:px-8">
-        <div className="flex flex-row justify-center">
-          <Image src={heroBg} alt="bg" className={styles.hero} priority />
-        </div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-          <h2 className="font-medium text-center text-4xl xl:text-7xl tracking-tight w-1/2 xl:leading-[108px]">
-            We build products people love
-          </h2>
-          <p className="font-normal text-center text-xl w-[38%] leading-8">
-            We help businesses improve bottom-line efficiency and focus on what
-            matters most
-          </p>
-        </div>
-      </section> */}
       <section className="relative lg:px-8">
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center px-4">
           <Image src={heroBg} alt="bg" className={styles.hero} priority />
         </div>
         <div className="absolute inset-0 pt-20 flex flex-col items-center gap-4">
-          <span className="font-medium text-center text-4xl lg:text-7xl flex flex-col gap-10">
-            <h2>We build products</h2>
-            <h2>people love</h2>
+          <span
+            className="font-medium text-center text-4xl lg:text-7xl flex flex-col gap-4"
+            style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
+          >
+            <h2 className="font-bold lg:font-medium text-center text-4xl lg:text-7xl">
+              We build products
+            </h2>
+            <h2
+              className="font-bold lg:font-medium text-center text-4xl lg:text-7xl"
+              style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
+            >
+              people love
+            </h2>
+            <p
+              className="font-normal text-center text-sm lg:text-xl"
+              style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
+            >
+              We help businesses improve bottom-line <br /> efficiency and focus
+              on what matters most
+            </p>
           </span>
-          <p className="font-normal text-center text-xl w-[38%] leading-8">
-            We help businesses improve bottom-line efficiency and focus on what
-            matters most
-          </p>
+
           <Link href={"/contactUs"}>
             <CustomButton
               text={"Get in touch"}
@@ -79,18 +84,18 @@ const HeroSection = () => {
             <Image
               src={people}
               alt="people"
-              width={767}
-              height={417}
-              style={{ width: 767, height: "auto" }}
+              width={isDesktopOrTablet ? 767 : 321}
+              height={isDesktopOrTablet ? 417 : 174}
+              style={{ width: "auto", height: "auto" }}
               priority
             />
             <Image
-              src={person}
+              src={isDesktopOrTablet ? person : person2}
               alt="person"
-              width={423}
-              height={417}
-              className="ml-[-80px]"
-              style={{ width: 423, height: "auto" }}
+              width={isDesktopOrTablet ? 423 : 324}
+              height={isDesktopOrTablet ? 417 : 112}
+              className="lg:ml-[-80px]"
+              style={{ width: "auto", height: "auto" }}
               priority
             />
           </div>
@@ -100,7 +105,7 @@ const HeroSection = () => {
         className={styles.companys}
         style={{ backgroundColor: colors.lightgray }}
       >
-        <p className="text-[64px] leading-[96px] tracking-tighter text-black text-center">
+        <p className="text-2xl font-bold lg:font-semibold lg:text-[64px] lg:leading-[96px] tracking-tighter text-black text-center">
           Agrandi has saved us thousands of hours of work and money
         </p>
         <div className="flex flex-row justify-center gap-16">

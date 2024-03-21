@@ -100,7 +100,6 @@
 // export default NavBar;
 
 import { FONTFAMILY, firstlinks } from "../../utils";
-import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import menu from "../../public/assets/icons/menu.svg";
@@ -124,19 +123,19 @@ const NavbarLogo = () => (
 const NavbarLinks = ({ pathname }: any) => (
   <div className="flex flex-row justify-between gap-9">
     {firstlinks.map((nav, index) => (
-      <Link href={nav.link} key={index} className="">
-        <p
-          style={{ fontFamily: FONTFAMILY.inter }}
-          className={`font-normal ${
-            pathname === nav.link
-              ? "text-[#635BFF]"
-              : ["", "/", "/services", "/about", "/contactUs"].includes(
-                  pathname
-                ) && "text-[#1C1C24]"
-          }`}
-        >
-          {nav.text}
-        </p>
+      <Link
+        href={nav.link}
+        key={index}
+        style={{ fontFamily: FONTFAMILY.inter }}
+        className={`font-normal ${
+          pathname === nav.link
+            ? "text-[#635BFF]"
+            : ["", "/", "/services", "/about", "/contactUs"].includes(
+                pathname
+              ) && "text-[#1C1C24]"
+        }`}
+      >
+        {nav.text}
       </Link>
     ))}
   </div>
@@ -155,7 +154,7 @@ const Navbar = () => {
           {isDesktopOrTablet && <NavbarLinks pathname={pathname} />}
         </div>
         {isDesktopOrTablet && (
-          <Link href={"/contactUs"}>
+          <div>
             <CustomButton
               text={"Get in touch"}
               disabled={false}
@@ -166,12 +165,12 @@ const Navbar = () => {
               paddingLeft={24}
               paddingRight={24}
               borderRadius={10}
+              href="/contactUs"
             />
-          </Link>
+          </div>
         )}
         {isMobile && (
           <div className="flex flex-row items-center gap-10">
-            {/* <NavbarLogo /> */}
             <Image
               src={menu}
               alt="menuBar"
