@@ -11,6 +11,8 @@ import sisyphus from "../../../../public/assets/icons/companys/sisyphus.svg";
 import catalog from "../../../../public/assets/icons/companys/catalog.svg";
 import quotient from "../../../../public/assets/icons/companys/quotient.svg";
 import circooles from "../../../../public/assets/icons/companys/circooles.svg";
+import kounty from "../../../../public/assets/icons/kounty.svg";
+import xms from "../../../../public/assets/icons/xms.svg";
 import { FONTFAMILY, colors } from "../../../../utils";
 import Link from "next/link";
 import useScreenSize from "../../../../utils/useScreenSize";
@@ -21,16 +23,16 @@ const HeroSection = () => {
 
   const logos = [
     {
-      logo: isDesktopOrTablet ? layers : "",
+      logo: isDesktopOrTablet && layers,
     },
     {
       logo: isDesktopOrTablet && sisyphus,
     },
     {
-      logo: circooles,
+      logo: isDesktopOrTablet ? circooles : kounty,
     },
     {
-      logo: catalog,
+      logo: isDesktopOrTablet ? catalog : xms,
     },
     {
       logo: isDesktopOrTablet && quotient,
@@ -94,7 +96,7 @@ const HeroSection = () => {
               alt="person"
               width={isDesktopOrTablet ? 423 : 324}
               height={isDesktopOrTablet ? 417 : 112}
-              className="lg:ml-[-80px]"
+              className="lg:ml-[-80px] mt-[-40px]"
               style={{ width: "auto", height: "auto" }}
               priority
             />
@@ -108,12 +110,12 @@ const HeroSection = () => {
         <p className="text-2xl font-bold lg:font-semibold lg:text-[64px] lg:leading-[96px] tracking-tighter text-black text-center">
           Agrandi has saved us thousands of hours of work and money
         </p>
-        <div className="flex flex-row justify-center gap-16">
+        <div className="flex flex-row justify-center gap-8 lg:gap-16">
           {logos.map((icon, key) => (
             <Image
               key={key}
               src={icon.logo}
-              alt="logo"
+              alt=""
               width={200}
               height={200}
               style={{ width: "auto", height: "auto" }}

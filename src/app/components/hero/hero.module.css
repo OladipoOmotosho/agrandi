@@ -23,4 +23,11 @@
     gap: 0px;
     border-radius: 24px;
   }
+
+  .companys {
+    margin-top: 340px;
+    margin-left: 16px;
+    margin-right: 16px;
+    padding: 36px 24px;
+  }
 }
