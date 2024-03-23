@@ -8,7 +8,13 @@ const config: Config = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        customBlue: "rgba(99, 91, 255, 0.1)",
+      },
+    },
+  },
   plugins: [],
 };
 export default config;

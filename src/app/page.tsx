@@ -11,7 +11,7 @@ const page = () => {
       <section>
         <HeroSection />
       </section>
-      <section className="mt-[60px]">
+      <section className="lg:mt-[60px]">
         <Service />
       </section>
       <section>

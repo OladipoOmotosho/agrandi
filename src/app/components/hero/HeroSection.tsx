@@ -23,19 +23,27 @@ const HeroSection = () => {
 
   const logos = [
     {
-      logo: isDesktopOrTablet && layers,
+      logo: layers,
     },
     {
-      logo: isDesktopOrTablet && sisyphus,
+      logo: sisyphus,
     },
     {
-      logo: isDesktopOrTablet ? circooles : kounty,
+      logo: circooles,
     },
     {
-      logo: isDesktopOrTablet ? catalog : xms,
+      logo: catalog,
     },
     {
-      logo: isDesktopOrTablet && quotient,
+      logo: quotient,
+    },
+  ];
+  const logos2 = [
+    {
+      logo: kounty,
+    },
+    {
+      logo: xms,
     },
   ];
 
@@ -96,7 +104,7 @@ const HeroSection = () => {
               alt="person"
               width={isDesktopOrTablet ? 423 : 324}
               height={isDesktopOrTablet ? 417 : 112}
-              className="lg:ml-[-80px] mt-[-40px]"
+              className="lg:ml-[-80px] mt-[-40px] lg:mt-0"
               style={{ width: "auto", height: "auto" }}
               priority
             />
@@ -110,19 +118,37 @@ const HeroSection = () => {
         <p className="text-2xl font-bold lg:font-semibold lg:text-[64px] lg:leading-[96px] tracking-tighter text-black text-center">
           Agrandi has saved us thousands of hours of work and money
         </p>
-        <div className="flex flex-row justify-center gap-8 lg:gap-16">
-          {logos.map((icon, key) => (
-            <Image
-              key={key}
-              src={icon.logo}
-              alt=""
-              width={200}
-              height={200}
-              style={{ width: "auto", height: "auto" }}
-              priority
-            />
-          ))}
-        </div>
+        {isDesktopOrTablet && (
+          <div className="flex flex-row justify-center gap-8 lg:gap-16">
+            {logos.map((icon, key) => (
+              <Image
+                key={key}
+                src={icon.logo}
+                alt="logo"
+                width={200}
+                height={200}
+                style={{ width: "auto", height: "auto" }}
+                priority
+              />
+            ))}
+          </div>
+        )}
+
+        {isMobile && (
+          <div className="flex flex-row justify-center gap-8 lg:gap-16">
+            {logos2.map((icon2, key) => (
+              <Image
+                key={key}
+                src={icon2.logo}
+                alt="logo"
+                width={200}
+                height={200}
+                style={{ width: "auto", height: "auto" }}
+                priority
+              />
+            ))}
+          </div>
+        )}
       </section>
     </main>
   );

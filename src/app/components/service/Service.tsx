@@ -3,23 +3,42 @@ import React from "react";
 import coding from "../../../../public/assets/images/coding.png";
 import { colors } from "../../../../utils";
 import boyGirl from "../../../../public/assets/images/boyGirl.png";
+import mobileBoyGirl from "../../../../public/assets/images/mobileBoyGirl.png";
+import useScreenSize from "../../../../utils/useScreenSize";
 const Service = () => {
+  const { isMobile, isTablet } = useScreenSize();
+  const isDesktopOrTablet = isTablet || !isMobile;
+
   return (
-    <div className="py-20">
-      <h1
-        className="font-medium text-[64px] text-center"
-        style={{ color: colors.black }}
-      >
-        Our Services
-      </h1>
-      <section className="flex flex-row gap-20 items-center xl:flex xl:flex-row xl:justify-between pr-[148px] pl-[116px] mt-[90px]">
+    <div className="py-20 px-4">
+      <div className="flex flex-row justify-center">
+        <h1
+          className="font-semibold lg:font-medium lg:text-[64px] w-fit lg:w-full text-2xl text-center rounded-3xl px-3 py-2"
+          style={{
+            color: colors.black,
+            background: isMobile ? colors.customBlue : colors.white,
+          }}
+        >
+          Our Services
+        </h1>
+      </div>
+      <section className="flex flex-col lg:flex-row gap-6 lg:gap-20 items-center xl:flex xl:flex-row xl:justify-between lg:pr-[148px] lg:pl-[116px] mt-[50px]">
         <div className="w-full">
-          <h3
-            className="font-medium text-[40px] text-left "
-            style={{ color: colors.black }}
-          >
-            Website, Web & <br /> Mobile Application <br /> Development
-          </h3>
+          {isDesktopOrTablet ? (
+            <h3
+              className="font-medium text-xl lg:text-[40px] lg:text-left "
+              style={{ color: colors.black }}
+            >
+              Website, Web & <br /> Mobile Application <br /> Development
+            </h3>
+          ) : (
+            <h3
+              className="font-medium text-xl lg:text-[40px] lg:text-left "
+              style={{ color: colors.black }}
+            >
+              Website, Web & Mobile Application Development
+            </h3>
+          )}
           <p
             className="font-normal text-base text-left leading-[27.8px] tracking-wide 2xl:w-4/5"
             style={{ color: colors.gray2 }}
@@ -34,18 +53,18 @@ const Service = () => {
             and creativity.
           </p>
         </div>
-        <div className="w-full">
+        <div className="w-full flex flex-row justify-center">
           <Image
             src={coding}
             alt="code"
             className="md:min-w-[500px]"
-            style={{ width: "auto", height: "auto" }}
+            width={isDesktopOrTablet ? 767 : 400}
             priority
           />
         </div>
       </section>
       <section
-        className="mx-[100px] flex flex-row xl:flex xl:flex-row xl:justify-between items-end 2xl:pt-20 pl-20 pb-0 rounded-[40px] mt-[140px]"
+        className="lg:mx-[100px] flex flex-col xl:flex xl:flex-row xl:justify-between items-end 2xl:pt-20 pt-8 px-4 lg:pl-20 pb-0 lg:rounded-[40px] mt-24 lg:mt-[140px] rounded-t-3xl"
         style={{ background: colors.deepBlue }}
       >
         <div className="w-full pb-[78px] flex flex-col gap-3 lg:min-w-[500px] sm:pt-20">
@@ -69,15 +88,22 @@ const Service = () => {
             technology roadmap for sustained growth and success.
           </p>
         </div>
-        <div className="w-full 2xl:ml-4">
-          <Image
-            src={boyGirl}
-            alt=""
-            className="mt-[109px] 2xl:min-w-[650px]"
-            priority
-          />
-        </div>
+        {isDesktopOrTablet && (
+          <div className="w-full 2xl:ml-4">
+            <Image
+              src={boyGirl}
+              alt=""
+              className="mt-[109px] 2xl:min-w-[650px]"
+              priority
+            />
+          </div>
+        )}
       </section>
+      {isMobile && (
+        <div className="w-full flex flex-row justify-center">
+          <Image src={mobileBoyGirl} alt="image" className="w-full" priority />
+        </div>
+      )}
     </div>
   );
 };

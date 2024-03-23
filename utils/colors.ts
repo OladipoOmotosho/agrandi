@@ -18,6 +18,7 @@ export type Colors<T> = {
   red: T;
   lightgray: T;
   grayBlack: T;
+  customBlue: T;
 };
 
 export const colors: Colors<string> = {
@@ -40,4 +41,5 @@ export const colors: Colors<string> = {
   black2: "#1C1C1C",
   gray7: "#969696",
   red: "#E43535",
+  customBlue: "rgba(99, 91, 255, 0.1)",
 };
