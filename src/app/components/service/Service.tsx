@@ -67,9 +67,9 @@ const Service = () => {
         className="lg:mx-[100px] flex flex-col xl:flex xl:flex-row xl:justify-between items-end 2xl:pt-20 pt-8 px-4 lg:pl-20 pb-0 lg:rounded-[40px] mt-24 lg:mt-[140px] rounded-t-3xl"
         style={{ background: colors.deepBlue }}
       >
-        <div className="w-full pb-[78px] flex flex-col gap-3 lg:min-w-[500px] sm:pt-20">
+        <div className="w-full pb-6 lg:pb-[78px] flex flex-col gap-3 lg:min-w-[500px] sm:pt-20">
           <h3
-            className="font-medium text-[40px]"
+            className="font-medium text-xl lg:text-[40px]"
             style={{ color: colors.white }}
           >
             IT Consulting
