@@ -16,15 +16,6 @@
   border-top-left-radius: 100px;
 }
 
-.people {
-  max-width: 767px;
-  /* max-height: 417px; */
-}
-
-.person {
-  max-width: 423px;
-}
-
 @media screen and (min-width: 324px) and (max-width: 800px) {
   .hero {
     min-width: 343px;
