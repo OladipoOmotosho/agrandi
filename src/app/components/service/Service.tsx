@@ -29,14 +29,14 @@ const Service = () => {
           Our Services
         </h1>
       </div>
-      <section className="flex flex-col lg:flex-row gap-6 lg:gap-20 items-center xl:flex xl:flex-row xl:justify-between lg:pr-[148px] lg:pl-[116px] mt-[50px]">
+      <section className="flex flex-col-reverse gap-6 lg:gap-20 items-center xl:flex xl:flex-row xl:justify-between lg:pr-[148px] lg:pl-[116px] mt-[50px]">
         <div className="w-full">
           {!isClient ? (
             <h3
-              className="font-medium text-xl lg:text-[40px] lg:text-left "
+              className="font-medium text-xl lg:text-[40px] lg:text-left lg:leading-[56px] w-4/5"
               style={{ color: colors.black }}
             >
-              Website, Web & <br /> Mobile Application <br /> Development
+              Website, Web & Mobile Application Development
             </h3>
           ) : (
             <h3
@@ -71,7 +71,7 @@ const Service = () => {
         </div>
       </section>
       <section
-        className="lg:mx-[100px] flex flex-col xl:flex xl:flex-row xl:justify-between items-end 2xl:pt-20 pt-8 px-4 lg:pl-20 pb-0 lg:rounded-[40px] mt-24 lg:mt-[140px] rounded-t-3xl"
+        className="lg:mx-[100px] flex flex-col xl:flex xl:flex-row xl:justify-between xl:gap-4 items-end 2xl:pt-20 pt-8 px-4 lg:pl-20 pb-0 lg:rounded-[40px] mt-24 lg:mt-[140px] rounded-t-3xl"
         style={{ background: colors.deepBlue }}
       >
         <div className="w-full pb-6 lg:pb-[78px] flex flex-col gap-3 lg:min-w-[500px] sm:pt-20">
@@ -96,7 +96,7 @@ const Service = () => {
           </p>
         </div>
         {!isClient && (
-          <div className="w-full 2xl:ml-4">
+          <div className="w-full xl:mr-[-20px] 2xl:ml-[-32px]">
             <Image
               src={boyGirl}
               alt=""
