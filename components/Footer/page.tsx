@@ -10,10 +10,16 @@ import insta from "../../public/assets/icons/insta.svg";
 import x from "../../public/assets/icons/x.svg";
 import youtube from "../../public/assets/icons/youtube.svg";
 import useScreenSize from "../../utils/useScreenSize";
+import { useEffect, useState } from "react";
 
 const Footer = () => {
   const { isMobile, isTablet, isDesktop } = useScreenSize();
-  const isDesktopOrTablet = isTablet || !isMobile;
+  const [isClient, setClient] = useState(false);
+  useEffect(() => {
+    if (isDesktop) {
+      setClient(true);
+    }
+  }, [isClient, isDesktop]);
 
   return (
     <div
@@ -75,7 +81,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        {isDesktop && (
+        {isClient && (
           <p
             className={"font-normal text-[13px] leading-[18px]"}
             style={{ color: colors.gray7 }}
@@ -91,7 +97,7 @@ const Footer = () => {
         <Image src={x} alt="image" />
         <Image src={youtube} alt="image" />
       </div>
-      {!isDesktop && (
+      {!isClient && (
         <p
           className={"font-normal text-[13px] leading-[18px]"}
           style={{ color: colors.gray7 }}

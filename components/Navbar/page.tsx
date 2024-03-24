@@ -18,7 +18,6 @@ const NavBar = () => {
   const [isClient, setClient] = useState(false);
   useEffect(() => {
     if (isMobile) {
-      console.log(isMobile);
       setClient(true);
     }
   }, [isClient, isMobile]);
@@ -38,7 +37,7 @@ const NavBar = () => {
                   style={{ width: "auto", height: "auto" }}
                 />
               </Link>
-              <div>
+              <div className="lg:flex lg:flex-row lg:gap-4">
                 {firstlinks.map((nav, index) => (
                   <Link href={nav.link} key={index}>
                     <p

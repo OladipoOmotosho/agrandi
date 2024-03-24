@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import coffeeMan from "../../../../public/assets/images/coffeeMan.png";
 import arrow from "../../../../public/assets/icons/companys/arrow.svg";
 import { FONTFAMILY, colors } from "../../../../utils";
@@ -9,12 +9,18 @@ const GetinTouch = () => {
   const { isMobile, isTablet, isDesktop } = useScreenSize();
   const isDesktopOrTablet = isTablet || !isMobile;
 
+  const [isClient, setClient] = useState(false);
+  useEffect(() => {
+    if (isDesktop) {
+      setClient(true);
+    }
+  }, [isClient, isDesktop]);
   return (
     <div className="lg:mx-[140px] px-4">
       <section className="flex flex-col-reverse lg:flex-row gap-8 lg:gap-20 2xl:justify-between lg:py-[60px]">
         <div className="w-full">
           <Image src={coffeeMan} alt="coffeeMan" />
-          {!isDesktop && (
+          {!isClient && (
             <div
               className="p-4 rounded-full w-20 h-20 mt-8"
               style={{ background: colors.blue }}
@@ -42,7 +48,7 @@ const GetinTouch = () => {
             is eager to collaborate with you. Contact us today to take the first
             step towards building a digital future that your audience will love.
           </p>
-          {isDesktop && (
+          {isClient && (
             <div
               className="p-4 rounded-full w-20 h-20"
               style={{ background: colors.blue }}
