@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import coding from "../../../../public/assets/images/coding.png";
 import { colors } from "../../../../utils";
 import boyGirl from "../../../../public/assets/images/boyGirl.png";
@@ -9,6 +9,13 @@ const Service = () => {
   const { isMobile, isTablet } = useScreenSize();
   const isDesktopOrTablet = isTablet || !isMobile;
 
+  const [isClient, setClient] = useState(false);
+  useEffect(() => {
+    if (isMobile) {
+      setClient(true);
+    }
+  }, [isClient, isMobile]);
+
   return (
     <div className="py-20 px-4">
       <div className="flex flex-row justify-center">
@@ -16,7 +23,7 @@ const Service = () => {
           className="font-semibold lg:font-medium lg:text-[64px] w-fit lg:w-full text-2xl text-center rounded-3xl px-3 py-2"
           style={{
             color: colors.black,
-            background: isMobile ? colors.customBlue : colors.white,
+            background: isClient ? colors.customBlue : colors.white,
           }}
         >
           Our Services
@@ -24,7 +31,7 @@ const Service = () => {
       </div>
       <section className="flex flex-col lg:flex-row gap-6 lg:gap-20 items-center xl:flex xl:flex-row xl:justify-between lg:pr-[148px] lg:pl-[116px] mt-[50px]">
         <div className="w-full">
-          {isDesktopOrTablet ? (
+          {!isClient ? (
             <h3
               className="font-medium text-xl lg:text-[40px] lg:text-left "
               style={{ color: colors.black }}
@@ -58,7 +65,7 @@ const Service = () => {
             src={coding}
             alt="code"
             className="md:min-w-[500px]"
-            width={isDesktopOrTablet ? 767 : 400}
+            width={!isClient ? 767 : 400}
             priority
           />
         </div>
@@ -88,7 +95,7 @@ const Service = () => {
             technology roadmap for sustained growth and success.
           </p>
         </div>
-        {isDesktopOrTablet && (
+        {!isClient && (
           <div className="w-full 2xl:ml-4">
             <Image
               src={boyGirl}
@@ -99,7 +106,7 @@ const Service = () => {
           </div>
         )}
       </section>
-      {isMobile && (
+      {isClient && (
         <div className="w-full flex flex-row justify-center">
           <Image src={mobileBoyGirl} alt="image" className="w-full" priority />
         </div>

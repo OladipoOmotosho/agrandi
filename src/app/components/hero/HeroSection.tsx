@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import heroBg from "../../../../public/assets/images/heroBg.png";
 import styles from "./hero.module.css";
 import CustomButton from "../../../../components/CustomButton";
@@ -20,6 +20,12 @@ import useScreenSize from "../../../../utils/useScreenSize";
 const HeroSection = () => {
   const { isMobile, isTablet } = useScreenSize();
   const isDesktopOrTablet = isTablet || !isMobile;
+  const [isClient, setClient] = useState(false);
+  useEffect(() => {
+    if (isMobile) {
+      setClient(true);
+    }
+  }, [isClient, isMobile]);
 
   const logos = [
     {
@@ -90,22 +96,23 @@ const HeroSection = () => {
             />
           </Link>
 
-          <div className="flex md:flex-row flex-col justify-center">
+          <div className="flex lg:flex-row flex-col justify-center">
             <Image
               src={people}
               alt="people"
-              width={isDesktopOrTablet ? 767 : 321}
-              height={isDesktopOrTablet ? 417 : 174}
+              // width={!isClient ? 767 : 321}
+              // height={!isClient ? 417 : 174}
+              className={styles.people}
               style={{ width: "auto", height: "auto" }}
               priority
             />
             <Image
-              src={isDesktopOrTablet ? person : person2}
+              src={!isClient ? person : person2}
               alt="person"
-              width={isDesktopOrTablet ? 423 : 324}
-              height={isDesktopOrTablet ? 417 : 112}
-              className="lg:ml-[-80px] mt-[-40px] lg:mt-0"
+              // width={!isClient ? 423 : 324}
+              // height={!isClient ? 417 : 112}
               style={{ width: "auto", height: "auto" }}
+              className={`lg:ml-[-80px] mt-[-40px] lg:mt-0 ${styles.person}`}
               priority
             />
           </div>
@@ -118,7 +125,7 @@ const HeroSection = () => {
         <p className="text-2xl font-bold lg:font-semibold lg:text-[64px] lg:leading-[96px] tracking-tighter text-black text-center">
           Agrandi has saved us thousands of hours of work and money
         </p>
-        {isDesktopOrTablet && (
+        {!isClient && (
           <div className="flex flex-row justify-center gap-8 lg:gap-16">
             {logos.map((icon, key) => (
               <Image
@@ -134,7 +141,7 @@ const HeroSection = () => {
           </div>
         )}
 
-        {isMobile && (
+        {isClient && (
           <div className="flex flex-row justify-center gap-8 lg:gap-16">
             {logos2.map((icon2, key) => (
               <Image

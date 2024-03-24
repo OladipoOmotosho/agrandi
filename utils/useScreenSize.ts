@@ -5,8 +5,8 @@ const useScreenSize = () => {
   const isClient = typeof window === "object";
 
   const [windowSize, setWindowSize] = useState({
-    width: isClient ? window.innerWidth : undefined,
-    height: isClient ? window.innerHeight : undefined,
+    width: isClient ? window.innerWidth : "",
+    height: isClient ? window.innerHeight : "",
   });
 
   useEffect(() => {
