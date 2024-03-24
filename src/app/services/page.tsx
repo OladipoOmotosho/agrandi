@@ -57,7 +57,7 @@ const page = () => {
   return (
     <div className="mx-[140px] mb-20">
       <div
-        className="flex flex-row justify-center mb-[68px] font-medium text-[4rem]"
+        className="flex flex-col lg:flex-row justify-center mb-[68px] font-medium text-[4rem]"
         style={{ color: colors.black }}
       >
         <h1>Our Services</h1>
@@ -71,7 +71,9 @@ const page = () => {
             img={detail.img}
             href={detail.href}
             className={`flex ${
-              index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+              index % 2 === 0
+                ? "lg:flex-row flex-col"
+                : "lg:flex-row-reverse flex-col"
             } justify-between items-center gap-24`}
             type="services"
           />
