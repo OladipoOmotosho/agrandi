@@ -46,7 +46,7 @@
 
   .person {
     max-width: 380px;
-    padding-top: 40px;
+    /* padding-top: 10px; */
   }
 
   .imgFlex {

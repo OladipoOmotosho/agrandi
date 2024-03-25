@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import InfoBlock from "../../../components/InfoBlock";
 import htmlDude from "../../../public/assets/images/htmlDude.png";
 import lady from "../../../public/assets/images/lady.png";
@@ -7,7 +7,7 @@ import women from "../../../public/assets/images/women.png";
 import flowChart from "../../../public/assets/images/coding.png";
 import digital from "../../../public/assets/images/digital.png";
 import analysis from "../../../public/assets/images/analysis.png";
-import { colors } from "../../../utils";
+import { FONTFAMILY, colors } from "../../../utils";
 
 const page = () => {
   const details = [
@@ -55,12 +55,14 @@ const page = () => {
     },
   ];
   return (
-    <div className="mx-[140px] mb-20">
-      <div
-        className="flex flex-col lg:flex-row justify-center mb-[68px] font-medium text-[4rem]"
-        style={{ color: colors.black }}
-      >
-        <h1>Our Services</h1>
+    <div className="mx-4 lg:mx-[140px] mb-20">
+      <div className="flex flex-row justify-center mb-8 lg:mb-[68px] mt-4">
+        <h1
+          className="font-medium text-xl lg:text-[4rem]  bg-customBlue w-fit lg:w-full py-3 lg:py-0 px-2 lg:px-0 rounded-3xl text-center lg:bg-none"
+          style={{ color: colors.black, fontFamily: FONTFAMILY.inter }}
+        >
+          Our Services
+        </h1>
       </div>
       <div className="flex flex-col gap-[92px]">
         {details.map((detail, index) => (
