@@ -96,7 +96,9 @@ const HeroSection = () => {
             />
           </Link>
 
-          <div className="flex lg:flex-row flex-col justify-center">
+          <div
+            className={`flex lg:flex-row flex-col justify-center ${styles.imgFlex}`}
+          >
             <Image
               src={people}
               alt="people"
