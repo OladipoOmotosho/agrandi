@@ -1,0 +1,9 @@
+.businessFootImg {
+  min-width: none;
+}
+
+@media screen and (min-width: 1040px) and (max-width: 3500px) {
+  .businessFootImg {
+    min-width: 450px;
+  }
+}

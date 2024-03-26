@@ -47,7 +47,7 @@ const Frame = ({
           </p>
         </div>
       </section>
-      <section className="mx-[14.5px] lg:mx-8 flex flex-col gap-6 lg:gap-0 lg:flex-row items-center mt-20 lg:mt-[140px] lg:pr-[84px] lg:pl-[116px]">
+      <section className="mx-[14.5px] lg:mx-8 flex flex-col gap-6 lg:gap-0 lg:flex-row items-center mt-12 lg:mt-[140px] lg:pr-[84px] lg:pl-[116px]">
         <div className="w-full flex flex-col gap-5 lg:pt-6">
           <h4
             className="text-xl lg:text-2xl font-medium lg:font-semibold leading-8 tracking-[0.51px] lg:w-3/4"

@@ -135,7 +135,7 @@ const page = () => {
       <section className="pt-20 lg:pt-[140px] md:pl-28 md:pr-28 xl:pl-[198px] xl:pr-[117px]">
         <div className="mx-[14.5px] lg:mx-auto" style={{ margin: "0" }}>
           <div className="flex flex-col lg:flex-row justify-between items-center md:gap-20 xl:gap-[140px]">
-            <div className="flex-grow w-full h-auto px-4 lg:px-0 ">
+            <div className="flex-grow flex justify-center w-full h-auto px-4 lg:px-0 ">
               <Image
                 src={sketch}
                 alt="image"
@@ -153,7 +153,7 @@ const page = () => {
               >
                 Our Development Process
               </h3>
-              <div className="">
+              <div>
                 {devProcess.slice(0, 2).map((left, index) => (
                   <DevelopmentProcess
                     key={index}
