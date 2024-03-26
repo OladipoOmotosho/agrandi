@@ -67,7 +67,7 @@ const Frame = ({
           </p>
         </div>
 
-        <div className="w-full">
+        <div className="w-full flex flex-row justify-center">
           <Image
             src={img}
             alt="image"

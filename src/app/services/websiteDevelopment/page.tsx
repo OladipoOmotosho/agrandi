@@ -139,7 +139,6 @@ const page = () => {
               <Image
                 src={sketch}
                 alt="image"
-                // style={{ minWidth: 450 }}
                 className={styles.sketch}
                 priority
               />
