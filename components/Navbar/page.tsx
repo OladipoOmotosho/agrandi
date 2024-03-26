@@ -8,6 +8,8 @@ import Image from "next/image";
 import agrandi from "../../public/assets/icons/agrandi.svg";
 import CustomButton from "../CustomButton";
 import { useEffect, useState } from "react";
+import styles from "./styles/navbar.module.css";
+import closeLine from "../../public/assets/icons/closeLine.svg";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -31,7 +33,15 @@ const NavBar = () => {
   return (
     <>
       {openMenu && (
-        <div className="bg-white flex flex-col gap-4 absolute top-20 left-0 right-0 mx-10 px-8 py-10 z-10">
+        <div
+          className={`flex flex-col gap-4 absolute top-20 left-20 right-0 mx-10 px-8 py-8 z-10 ${styles.modal}`}
+        >
+          <div
+            className=" flex flex-row justify-end"
+            onClick={() => setOpenMenu(false)}
+          >
+            <Image src={closeLine} alt="close" />
+          </div>
           {firstlinks.map((nav, index) => (
             <Link href={nav.link} key={index}>
               <p
