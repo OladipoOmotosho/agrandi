@@ -58,7 +58,7 @@ const page = () => {
     <div className="mx-4 lg:mx-[140px] mb-20">
       <div className="flex flex-row justify-center mb-8 lg:mb-[68px] mt-4">
         <h1
-          className="font-medium text-xl lg:text-[4rem]  bg-customBlue w-fit lg:w-full py-3 lg:py-0 px-2 lg:px-0 rounded-3xl text-center lg:bg-none"
+          className="font-medium text-xl lg:text-[4rem] bg-customBlue w-fit lg:w-full py-3 lg:py-0 px-2 lg:px-0 rounded-3xl text-center lg:bg-white"
           style={{ color: colors.black, fontFamily: FONTFAMILY.inter }}
         >
           Our Services

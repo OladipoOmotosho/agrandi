@@ -1,10 +1,22 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import { FONTFAMILY, colors } from "../../../../utils";
 import SideBars from "../../../../components/SideBars";
 import circle from "../../../../public/assets/icons/circle.svg";
 import line from "../../../../public/assets/icons/line.svg";
+import useScreenSize from "../../../../utils/useScreenSize";
 
 const WhyBox = ({ text, reasons, type }: whyBox) => {
+  const { isMobile, isTablet, isDesktop } = useScreenSize();
+  const isMobileorTablet = isMobile || isTablet;
+
+  const [isClient, setClient] = useState(false);
+  useEffect(() => {
+    if (isMobileorTablet) {
+      setClient(true);
+    }
+  }, [isClient, isMobileorTablet]);
+
   const renderSideBars = () => {
     if (type === "noLine") {
       return <SideBars img1={circle} img2={line} type="noLine" />;
@@ -23,7 +35,8 @@ const WhyBox = ({ text, reasons, type }: whyBox) => {
   return (
     <div className="flex flex-col">
       <div className="flex flex-row items-start gap-6">
-        {renderSideBars()}
+        {!isClient && <div> {renderSideBars()}</div>}
+
         <div className="w-full mt-[-40px] pt-9 pb-6">
           <h4
             className="text-xl font-medium leading-8 tracking-[0.51px]"

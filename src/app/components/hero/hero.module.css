@@ -41,10 +41,12 @@
 }
 @media screen and (min-width: 1000px) and (max-width: 1200px) {
   .people {
+    width: 767;
     max-width: 667px;
   }
 
   .person {
+    width: 417;
     max-width: 380px;
     /* padding-top: 10px; */
   }

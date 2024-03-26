@@ -102,8 +102,8 @@ const HeroSection = () => {
             <Image
               src={people}
               alt="people"
-              // width={!isClient ? 767 : 321}
-              // height={!isClient ? 417 : 174}
+              width={!isClient ? 767 : 321}
+              height={!isClient ? 417 : 174}
               className={styles.people}
               style={{ width: "auto", height: "auto" }}
               priority
@@ -111,8 +111,8 @@ const HeroSection = () => {
             <Image
               src={!isClient ? person : person2}
               alt="person"
-              // width={!isClient ? 423 : 324}
-              // height={!isClient ? 417 : 112}
+              width={!isClient ? 423 : 324}
+              height={!isClient ? 417 : 112}
               style={{ width: "auto", height: "auto" }}
               className={`lg:ml-[-80px] mt-[-40px] lg:mt-0 ${styles.person}`}
               priority
