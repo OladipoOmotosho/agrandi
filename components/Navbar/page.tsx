@@ -13,7 +13,7 @@ const NavBar = () => {
   const pathname = usePathname();
   const { isMobile, isTablet, isDesktop } = useScreenSize();
   const isDesktopOrTablet = isTablet || !isMobile;
-  // const [openMenu, setOpenMenu] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const [isClient, setClient] = useState(false);
   useEffect(() => {
@@ -22,8 +22,36 @@ const NavBar = () => {
     }
   }, [isClient, isMobile]);
 
+  // useEffect(() => {
+  //   if(openMenu){
+
+  //   }
+  // })
+
   return (
     <>
+      {openMenu && (
+        <div className="bg-white flex flex-col gap-4 absolute top-20 left-0 right-0 mx-10 px-8 py-10 z-10">
+          {firstlinks.map((nav, index) => (
+            <Link href={nav.link} key={index}>
+              <p
+                style={{ fontFamily: FONTFAMILY.inter }}
+                className={`font-normal ${
+                  pathname === nav.link
+                    ? "text-[#635BFF]"
+                    : pathname === "/" ||
+                      pathname === "/services" ||
+                      pathname === "/about" ||
+                      (pathname === "/contactUs" && "text-[#ffffff]")
+                }`}
+              >
+                {nav.text}
+              </p>
+            </Link>
+          ))}
+        </div>
+      )}
+
       <div className={`md:py-6 py-6 px-4 xl:px-[140px]`}>
         {!isClient ? (
           <div className="flex flex-row justify-between items-center">
@@ -84,7 +112,7 @@ const NavBar = () => {
                 />
               </Link>
             </div>
-            <div>
+            <div className="cursor-pointer" onClick={() => setOpenMenu(true)}>
               <Image
                 src={menu}
                 alt="menuBar"
