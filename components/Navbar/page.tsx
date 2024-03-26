@@ -34,7 +34,7 @@ const NavBar = () => {
     <>
       {openMenu && (
         <div
-          className={`flex flex-col gap-4 absolute top-20 left-20 right-0 mx-10 px-8 py-8 z-10 ${styles.modal}`}
+          className={`flex flex-col gap-4 absolute top-20 left-[50%] right-0 mx-5 px-8 py-8 z-10 ${styles.modal}`}
         >
           <div
             className=" flex flex-row justify-end"
