@@ -7,6 +7,7 @@ import { FONTFAMILY, colors } from "../../../../utils";
 import WhyBox from "../components/WhyBox";
 import foot from "../../../../public/assets/images/foot.png";
 import DevelopmentProcess from "../components/DevelopmentProcess";
+import styles from "./business.module.css";
 
 const page = () => {
   const leftSideDetails = [
@@ -91,16 +92,16 @@ const page = () => {
         subTopic={"Strategic Business Analysis for Informed Decision-Making"}
       />
       <section
-        className="mt-[88px] flex flex-col items-center pt-10 pb-[60px]"
+        className="mt-[80.48px] lg:mt-[88px] flex flex-col items-center px-[14px] lg:px-0 pt-8 lg:pt-10 pb-[60px] rounded-t-[40px] lg:rounded-t-none"
         style={{ background: colors.lightgray }}
       >
         <h3
-          className="font-medium text-2xl text-center leading-8 tracking-[0.51px] w-[40%] mb-[60px]"
+          className="font-medium text-xl lg:text-2xl text-center leading-8 tracking-[0.51px] lg:w-[40%] mb-6 lg:mb-[60px]"
           style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
         >
           {"Why Choose Agrandi Technologies for Business Analysis?"}
         </h3>
-        <div className="w-full flex flex-row justify-between gap-24 pl-[175px] pr-[198px]">
+        <div className="w-full flex flex-col lg:flex-row justify-between lg:gap-24 lg:pl-[175px] lg:pr-[198px]">
           <div className="flex flex-col">
             {leftSideDetails.slice(0, 2).map((left, index) => (
               <WhyBox
@@ -137,23 +138,18 @@ const page = () => {
           </div>
         </div>
       </section>
-      <section className="pt-[140px] md:pl-28 md:pr-28 xl:pl-[198px] xl:pr-[117px]">
-        <div className="mx-auto" style={{ margin: "0" }}>
-          <div className="flex flex-row justify-between items-start md:gap-20 xl:gap-[140px]">
-            <div className="flex-grow w-full h-auto">
-              <Image
-                src={foot}
-                alt="image"
-                style={{ minWidth: 450 }}
-                priority
-              />
+      <section className="pt-20 lg:pt-[140px] md:pl-28 md:pr-28 xl:pl-[198px] xl:pr-[117px]">
+        <div className="mx-[14.5px] lg:mx-auto" style={{ margin: "0" }}>
+          <div className="flex flex-col lg:flex-row justify-between items-center md:gap-20 xl:gap-[140px]">
+            <div className="flex-grow flex justify-center w-full h-auto px-4 lg:px-0 ">
+              <Image src={foot} alt="image" className={styles.foot} priority />
             </div>
             <div
-              className="flex-grow w-full h-auto mt-[-18px]"
+              className="flex-grow w-full px-4 lg:px-0 h-auto mt-8 lg:mt-0"
               style={{ minWidth: 300 }}
             >
               <h3
-                className="font-medium text-2xl tracking-tight leading-9 mb-8"
+                className="font-medium text-xl lg:text-2xl text-center lg:text-left tracking-tight leading-9 mb-8"
                 style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
               >
                 Our Business Analysis Process
