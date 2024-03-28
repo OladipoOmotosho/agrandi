@@ -77,12 +77,12 @@ body {
   text-align: left;
 }
 
-@media screen and (min-width: 500px) and (max-width: 900px) {
+/* @media screen and (min-width: 500px) and (max-width: 900px) {
   .customTextArea {
     width: 343px;
   }
-}
-@media screen and (min-width: 901px) and (max-width: 8000px) {
+} */
+@media screen and (min-width: 500px) and (max-width: 8000px) {
   .customTextArea {
     width: 464px;
   }
