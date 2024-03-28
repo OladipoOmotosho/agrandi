@@ -118,7 +118,7 @@ const page = () => {
           </div>
         </section>
       </div>
-      <div className="lg:ml-[140px] lg:mr-[117px] mx-4 mt-8">
+      <div className="lg:ml-[140px] lg:mr-[117px] mx-4 mt-8 lg:mt-0 sm:flex sm:flex-col sm:gap-16">
         {details.map((detail, index) => (
           <InfoBlock
             key={index}
@@ -137,18 +137,5 @@ const page = () => {
     </div>
   );
 };
-
-// <div className="lg:ml-[140px] lg:mr-[117px] mx-4 mt-8">
-//       {details.map((detail, index) => (
-//         <InfoBlock
-//           key={index}
-//           heading={detail.heading}
-//           information={detail.information}
-//           img={detail.img}
-//           className={`flex ${
-//             index % 2 === 0 ? "flex-col" : "flex-col"
-//           } justify-between items-center gap-24`}
-//           type="about"
-//         />
 
 export default page;
