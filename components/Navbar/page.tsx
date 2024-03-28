@@ -24,11 +24,10 @@ const NavBar = () => {
     }
   }, [isClient, isMobile]);
 
-  // useEffect(() => {
-  //   if(openMenu){
-
-  //   }
-  // })
+  useEffect(() => {
+    if (openMenu) {
+    }
+  });
 
   return (
     <>
@@ -75,7 +74,7 @@ const NavBar = () => {
                   style={{ width: "auto", height: "auto" }}
                 />
               </Link>
-              <div className="lg:flex lg:flex-row lg:gap-4">
+              <div className={`lg:flex lg:flex-row lg:gap-4 ${styles.tablet}`}>
                 {firstlinks.map((nav, index) => (
                   <Link href={nav.link} key={index}>
                     <p

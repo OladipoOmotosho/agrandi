@@ -54,7 +54,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <main className="mt-10 ">
+    <main className="mt-10">
       <section className="relative lg:px-8">
         <div className="flex flex-row justify-center px-4">
           <Image src={heroBg} alt="bg" className={styles.hero} priority />
@@ -117,6 +117,15 @@ const HeroSection = () => {
               className={`lg:ml-[-80px] mt-[-40px] lg:mt-0 ${styles.person}`}
               priority
             />
+            <Image
+              src={person2}
+              alt="person"
+              width={!isClient ? 423 : 324}
+              height={!isClient ? 417 : 112}
+              style={{ width: "auto", height: "auto" }}
+              className={`lg:ml-[-80px] mt-[-40px] lg:mt-0 ${styles.person2}`}
+              priority
+            />
           </div>
         </div>
       </section>
@@ -128,7 +137,7 @@ const HeroSection = () => {
           Agrandi has saved us thousands of hours of work and money
         </p>
         {!isClient && (
-          <div className="flex flex-row justify-center gap-8 lg:gap-16">
+          <div className="flex flex-row justify-center gap-2 lg:gap-16">
             {logos.map((icon, key) => (
               <Image
                 key={key}

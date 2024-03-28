@@ -15,15 +15,16 @@ import { useEffect, useState } from "react";
 const Footer = () => {
   const { isMobile, isTablet, isDesktop } = useScreenSize();
   const [isClient, setClient] = useState(false);
+  const isDesktopOrTablet = isDesktop || isTablet;
   useEffect(() => {
-    if (isDesktop) {
+    if (isDesktopOrTablet) {
       setClient(true);
     }
-  }, [isClient, isDesktop]);
+  }, [isClient, isDesktopOrTablet]);
 
   return (
     <div
-      className="md:flex md:justify-between items-start md:px-[140px] px-[24px] md:pt-[40px] pt-[60px] pb-14 lg:pb-[122px] md:pb-[56px]"
+      className={`${styles.responisveness}`}
       style={{ backgroundColor: colors.white }}
     >
       <div>
@@ -38,8 +39,8 @@ const Footer = () => {
           />
         </p>
       </div>
-      <div className="flex flex-col gap-[30px] lg:items-center">
-        <div className="flex flex-col lg:flex-row gap-8">
+      <div className={`flex flex-col gap-[30px] lg:items-center`}>
+        <div className={`${styles.biggerScreens}`}>
           <div>
             {ServiceLink.map((link, index) => (
               <Link key={index} href={link.link}>
