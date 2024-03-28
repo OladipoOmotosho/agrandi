@@ -2,11 +2,13 @@
 import Image from "next/image";
 import React from "react";
 import aboutBg from "../../../public/assets/images/aboutBg.png";
+import mobileAboutBg from "../../../public/assets/images/mobileAboutBg.png";
 import { FONTFAMILY, colors } from "../../../utils";
 import InfoBlock from "../../../components/InfoBlock";
 import vrGirl from "../../../public/assets/images/vrGirl.png";
 import handshake from "../../../public/assets/images/handshake.png";
 import map from "../../../public/assets/images/map.png";
+import styles from "./styles/about.module.css";
 
 const page = () => {
   const details = [
@@ -15,8 +17,7 @@ const page = () => {
       information: (
         <>
           <>
-            {" "}
-            Website and Application Development <br />{" "}
+            Website and Application Development <br />
           </>
           At Agrandi Technologies, we are passionate about crafting exceptional
           digital experiences. Our team of skilled developers specializes in
@@ -43,19 +44,35 @@ const page = () => {
     },
   ];
   return (
-    <div className="mb-[146px]">
-      <div className="mx-8">
-        <Image src={aboutBg} alt="backgroundImage" quality={90} priority />
+    <div className="lg:mb-[146px]">
+      <div className="lg:mx-8">
+        <Image
+          src={aboutBg}
+          alt="backgroundImage"
+          quality={90}
+          priority
+          className={styles.imgProperties}
+        />
+        <Image
+          src={mobileAboutBg}
+          alt="backgroundImage"
+          quality={90}
+          priority
+          className={styles.imgProperties2}
+        />
       </div>
-      <div className="mb-[92px]">
-        <section className="flex flex-row justify-between 2xl:justify-center 2xl:gap-44 gap-16">
+      <div className="lg:mb-[92px]">
+        <section className={styles.sectionA}>
           <div
-            className="p-8 rounded-[20px] max-w-[509px] mt-[-110px] ml-[148px]"
+            className={`p-5 lg:p-8 lg:max-w-[509px] mt-[-110px] lg:ml-[148px] ${styles.backgroundBg}`}
             style={{ background: colors.lightgray }}
           >
             <h3
-              className="font-medium text-[64px] leading-[78px] tracking-tighter"
-              style={{ color: colors.black, fontFamily: FONTFAMILY.inter }}
+              className="font-medium text-[28px] w-fit mb-4 lg:mb-0 lg:text-[64px] lg:bg-inherit bg-customBlue rounded-3xl py-1 px-4 text-center lg:leading-[78px] tracking-tighter"
+              style={{
+                color: colors.black,
+                fontFamily: FONTFAMILY.inter,
+              }}
             >
               About Us
             </h3>
@@ -78,7 +95,7 @@ const page = () => {
               future, one breakthrough at a time.
             </p>
           </div>
-          <div className="mr-[117px] max-w-[474px] mt-[111px]">
+          <div className="lg:mr-[117px] lg:max-w-[474px] lg:mt-[111px]">
             <h4
               className="font-medium text-2xl leading-8 tracking-tighter"
               style={{ color: colors.black, fontFamily: FONTFAMILY.inter }}
@@ -101,7 +118,7 @@ const page = () => {
           </div>
         </section>
       </div>
-      <div className="ml-[140px] mr-[117px]">
+      <div className="lg:ml-[140px] lg:mr-[117px] mx-4 mt-8">
         {details.map((detail, index) => (
           <InfoBlock
             key={index}
@@ -109,8 +126,10 @@ const page = () => {
             information={detail.information}
             img={detail.img}
             className={`flex ${
-              index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-            } justify-between items-center gap-24`}
+              index % 2 === 0
+                ? "flex-col lg:flex-row"
+                : "flex-col lg:flex-row-reverse "
+            } justify-between items-center gap-10 lg:gap-24`}
             type="about"
           />
         ))}
@@ -118,5 +137,18 @@ const page = () => {
     </div>
   );
 };
+
+// <div className="lg:ml-[140px] lg:mr-[117px] mx-4 mt-8">
+//       {details.map((detail, index) => (
+//         <InfoBlock
+//           key={index}
+//           heading={detail.heading}
+//           information={detail.information}
+//           img={detail.img}
+//           className={`flex ${
+//             index % 2 === 0 ? "flex-col" : "flex-col"
+//           } justify-between items-center gap-24`}
+//           type="about"
+//         />
 
 export default page;

@@ -14,7 +14,7 @@ const InfoBlock = ({
 }: infoBlock) => {
   return (
     <div className={className}>
-      <div className="w-full flex flex-col gap-5">
+      <div className="w-full flex flex-col gap-5 mt-10 lg:mt-0">
         <div className="flex flex-col gap-1">
           <h4 className="text-xl font-semibold" style={{ color: colors.black }}>
             {heading}
