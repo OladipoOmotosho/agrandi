@@ -33,14 +33,14 @@ const Service = () => {
         <div className="w-full">
           {!isClient ? (
             <h3
-              className="font-medium text-xl lg:text-[40px] lg:text-left lg:leading-[56px] w-4/5"
+              className="font-medium text-xl sm:text-3xl lg:text-[40px] lg:text-left lg:leading-[56px] w-4/5"
               style={{ color: colors.black }}
             >
               Website, Web & Mobile Application Development
             </h3>
           ) : (
             <h3
-              className="font-medium text-xl lg:text-[40px] lg:text-left "
+              className="font-medium text-xl sm:text-3xl lg:text-[40px] lg:text-left "
               style={{ color: colors.black }}
             >
               Website, Web & Mobile Application Development
@@ -71,10 +71,10 @@ const Service = () => {
         </div>
       </section>
       <section
-        className="lg:mx-[100px] flex flex-col xl:flex xl:flex-row xl:justify-between xl:gap-4 items-end 2xl:pt-20 pt-8 px-4 lg:pl-20 pb-0 lg:rounded-[40px] mt-24 lg:mt-[140px] rounded-t-3xl"
+        className="lg:mx-[100px] flex flex-col xl:flex xl:flex-row xl:justify-between xl:gap-4 items-end  pt-8 sm:pt-4 2xl:pt-20 px-4 lg:pl-20 pb-0 lg:rounded-[40px] mt-20 lg:mt-[140px] rounded-t-3xl"
         style={{ background: colors.deepBlue }}
       >
-        <div className="w-full pb-6 lg:pb-[78px] flex flex-col gap-3 lg:min-w-[500px] sm:pt-20">
+        <div className="w-full pb-6 lg:pb-[78px] flex flex-col gap-3 lg:min-w-[500px] sm:pt-10">
           <h3
             className="font-medium text-xl lg:text-[40px]"
             style={{ color: colors.white }}
@@ -100,7 +100,7 @@ const Service = () => {
             <Image
               src={boyGirl}
               alt=""
-              className="mt-[109px] 2xl:min-w-[650px]"
+              className="sm:mt-10 mt-[109px] 2xl:min-w-[650px]"
               priority
             />
           </div>

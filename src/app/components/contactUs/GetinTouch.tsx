@@ -31,7 +31,7 @@ const GetinTouch = () => {
         </div>
         <div className="w-full flex flex-col gap-4">
           <h3
-            className="font-medium text-xl lg:text-[40px] text-left w-4/5"
+            className="font-medium text-xl sm:text-3xl lg:text-[40px] text-left w-4/5"
             style={{ color: colors.black, fontFamily: FONTFAMILY.inter }}
           >
             Get in touch
