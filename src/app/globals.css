@@ -48,7 +48,7 @@ body {
   background: inherit;
   outline: none;
   color: #3b3b3b;
-  width: 464px;
+  width: 343px;
   height: 143px;
   top: 28px;
   padding: 15.5px, 327px, 107.5px, 12px;
@@ -77,8 +77,13 @@ body {
   text-align: left;
 }
 
-/* @media screen and (min-width: 324px) and (max-width: 767px) {
-  body {
-    padding: 0px 16px;
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .customTextArea {
+    width: 343px;
   }
-} */
+}
+@media screen and (min-width: 901px) and (max-width: 8000px) {
+  .customTextArea {
+    width: 464px;
+  }
+}

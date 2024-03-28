@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import calendar from "../public/assets/icons/calendar.svg";
 import eyeHide from "../public/assets/icons/eyeHide.svg";
 import eyeShow from "../public/assets/icons/eyeShow.svg";
@@ -45,14 +45,14 @@ const CustomTextInput = ({
   const [showCalendar, setShowCalendar] = useState(true);
 
   const { windowSize, isMobile, isDesktop, isTablet } = useScreenSize();
-  const screenWidth = windowSize.width || 0;
-  const inputWidth = isMobile
-    ? screenWidth
-    : isDesktop
-    ? 464
-    : isTablet
-    ? 360
-    : width || 464;
+  const [isClient, setClient] = useState(false);
+  const isDesktopOrTablet = isDesktop || isTablet;
+
+  useEffect(() => {
+    if (isMobile) {
+      setClient(true);
+    }
+  }, [isClient, isMobile]);
 
   return (
     <div className={className}>
@@ -66,7 +66,7 @@ const CustomTextInput = ({
           borderWidth: 1,
           borderColor: borderColor,
           borderRadius: 4,
-          width: inputWidth,
+          width: isClient ? 343 : width || 464,
           height: height,
           //   placeholderStyle: placeholderStyle,
         }}

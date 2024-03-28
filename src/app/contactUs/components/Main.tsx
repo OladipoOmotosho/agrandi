@@ -1,23 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CustomTextInput from "../../../../components/CustomTextInput";
 import { colors } from "../../../../utils";
 import CustomButton from "../../../../components/CustomButton";
+import useScreenSize from "../../../../utils/useScreenSize";
 
 const Main = () => {
   const [fullName, setFullName] = useState<string | number>("");
   const [email, setEmail] = useState<string | number>("");
   const [message, setMessage] = useState<string | number>("");
+
+  const { isTablet, isDesktop } = useScreenSize();
+  const [isClient, setClient] = useState(false);
+  const isDesktopOrTablet = isDesktop || isTablet;
+  useEffect(() => {
+    if (isDesktopOrTablet) {
+      setClient(true);
+    }
+  }, [isClient, isDesktopOrTablet]);
+
   return (
     <div>
       <div className="flex flex-col gap-4 mb-10">
         <h1
-          className="font-medium text-[64px] leading-[78px] tracking-[0.51px]"
+          // className="font-medium text-[64px] leading-[78px] tracking-[0.51px]"
+          className="font-medium text-[28px] w-fit mb-4 lg:mb-0 lg:text-[64px] lg:bg-inherit bg-customBlue rounded-3xl py-1 px-4 lg:px-0 text-center lg:leading-[78px] tracking-[0.51px]"
           style={{ color: colors.black }}
         >
           Get in touch
         </h1>
         <p
-          className="font-normal text-base text-left tracking-normal"
+          className="font-normal text-base text-left tracking-normal "
           style={{ color: colors.gray33 }}
         >
           Please fill the form below if you have any enquiries or questions,{" "}
@@ -30,7 +42,7 @@ const Main = () => {
           value={fullName}
           setValue={setFullName}
           label={"Full Name"}
-          width={464}
+          width={isClient ? 464 : 343}
           className="customTextInputContainer"
           inputClassName="customInput"
           labelClassName="customLabel"
@@ -41,7 +53,7 @@ const Main = () => {
           value={email}
           setValue={setEmail}
           label={"Email"}
-          width={464}
+          width={isClient ? 464 : 343}
           className="customTextInputContainer"
           inputClassName="customInput"
           labelClassName="customLabel"
@@ -53,6 +65,7 @@ const Main = () => {
           </label>
           <textarea
             className="customTextArea"
+            // style={{ width: isClient ? 464 : 343 }}
             placeholder="Enter your message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
