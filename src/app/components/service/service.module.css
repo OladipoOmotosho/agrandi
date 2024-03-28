@@ -1,0 +1,14 @@
+.tabImg {
+  display: none;
+}
+
+@media screen and (min-width: 500px) and (max-width: 999px) {
+  .tabImg {
+    display: block !important;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+  .desktopImg {
+    display: none;
+  }
+}

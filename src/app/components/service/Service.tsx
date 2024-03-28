@@ -4,7 +4,10 @@ import coding from "../../../../public/assets/images/coding.png";
 import { colors } from "../../../../utils";
 import boyGirl from "../../../../public/assets/images/boyGirl.png";
 import mobileBoyGirl from "../../../../public/assets/images/mobileBoyGirl.png";
+import personnels from "../../../../public/assets/images/personnels.png";
 import useScreenSize from "../../../../utils/useScreenSize";
+import styles from "./service.module.css";
+
 const Service = () => {
   const { isMobile, isTablet } = useScreenSize();
   const isDesktopOrTablet = isTablet || !isMobile;
@@ -99,8 +102,14 @@ const Service = () => {
           <div className="w-full xl:mr-[-20px] 2xl:ml-[-32px]">
             <Image
               src={boyGirl}
-              alt=""
-              className="sm:mt-10 mt-[109px] 2xl:min-w-[650px]"
+              alt="img"
+              className={`sm:mt-10 mt-[109px] 2xl:min-w-[650px] ${styles.desktopImg}`}
+              priority
+            />
+            <Image
+              src={personnels}
+              alt="img"
+              className={`sm:mt-10 mt-[109px] 2xl:min-w-[650px] ${styles.tabImg}`}
               priority
             />
           </div>
