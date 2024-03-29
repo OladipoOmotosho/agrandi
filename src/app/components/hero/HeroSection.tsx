@@ -61,14 +61,14 @@ const HeroSection = () => {
         </div>
         <div className="absolute inset-0 pt-20 flex flex-col items-center gap-4">
           <span
-            className="font-medium text-center text-4xl lg:text-7xl flex flex-col gap-4"
+            className="font-medium text-center text-[36px] lg:text-7xl flex flex-col gap-4"
             style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
           >
-            <h2 className="font-bold lg:font-medium text-center text-4xl lg:text-7xl">
+            <h2 className="font-bold lg:font-medium text-center text-[36px] lg:text-7xl">
               We build products
             </h2>
             <h2
-              className="font-bold lg:font-medium text-center text-4xl lg:text-7xl"
+              className="font-bold lg:font-medium text-center text-[36px] lg:text-7xl"
               style={{ fontFamily: FONTFAMILY.inter, color: colors.black }}
             >
               people love
